@@ -4,7 +4,15 @@
   "private": true,
   "type": "module",
   "description": "Website for Expressions Hair Designs",
-  "scripts": {},
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "check": "turbo check"
+  },
+  "devDependencies": {
+    "turbo": "^2.7.0"
+  },
   "volta": {
     "node": "24.13.0"
   },
