@@ -11,6 +11,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@repo/db": "workspace:*",
     "@sveltejs/kit": "^2.20.0",
     "bits-ui": "^1.0.0",
     "clsx": "^2.1.0",
