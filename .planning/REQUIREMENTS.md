@@ -119,13 +119,69 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (populated by roadmap) | | |
+| BOOK-01 | 3 | Pending |
+| BOOK-02 | 3 | Pending |
+| BOOK-03 | 3 | Pending |
+| BOOK-04 | 3 | Pending |
+| BOOK-05 | 3 | Pending |
+| BOOK-06 | 3 | Pending |
+| BOOK-07 | 6 | Pending |
+| BOOK-08 | 3 | Pending |
+| PAY-01 | 4 | Pending |
+| PAY-02 | 4 | Pending |
+| PAY-03 | 4 | Pending |
+| PAY-04 | 4 | Pending |
+| STAFF-01 | 2 | Pending |
+| STAFF-02 | 2 | Pending |
+| STAFF-03 | 2 | Pending |
+| STAFF-04 | 2 | Pending |
+| STAFF-05 | 2 | Pending |
+| NOTIF-01 | 5 | Pending |
+| NOTIF-02 | 5 | Pending |
+| NOTIF-03 | 5 | Pending |
+| NOTIF-04 | 5 | Pending |
+| NOTIF-05 | 5 | Pending |
+| CONT-01 | 2 | Pending |
+| CONT-02 | 2 | Pending |
+| CONT-03 | 2 | Pending |
+| CONT-04 | 2 | Pending |
+| CONT-05 | 2 | Pending |
+| ADMIN-01 | 7 | Pending |
+| ADMIN-02 | 7 | Pending |
+| ADMIN-03 | 7 | Pending |
+| ADMIN-04 | 7 | Pending |
+| ADMIN-05 | 7 | Pending |
+| UX-01 | 1 | Pending |
+| UX-02 | 1 | Pending |
+| UX-03 | 1 | Pending |
+| UX-04 | 1 | Pending |
+| UX-05 | 1 | Pending |
+| UX-06 | 1 | Pending |
+| UX-07 | 1 | Pending |
+| UX-08 | 1 | Pending |
+| UX-09 | 1 | Pending |
+| UX-10 | 1 | Pending |
+| SEO-01 | 7 | Pending |
+| SEO-02 | 7 | Pending |
+| SEO-03 | 7 | Pending |
+| SEO-04 | 7 | Pending |
 
 **Coverage:**
-- v1 requirements: 37 total
-- Mapped to phases: 0
-- Unmapped: 37 (awaiting roadmap)
+- v1 requirements: 46 total
+- Mapped to phases: 46
+- Unmapped: 0
+
+**By Phase:**
+| Phase | Requirements | Count |
+|-------|--------------|-------|
+| 1. Foundation | UX-01 through UX-10 | 10 |
+| 2. Staff-Services-Content | STAFF-01 through STAFF-05, CONT-01 through CONT-05 | 10 |
+| 3. Booking-Engine | BOOK-01 through BOOK-06, BOOK-08 | 7 |
+| 4. Payments | PAY-01 through PAY-04 | 4 |
+| 5. Notifications | NOTIF-01 through NOTIF-05 | 5 |
+| 6. Calendar-Sync | BOOK-07 | 1 |
+| 7. Admin-SEO-Launch | ADMIN-01 through ADMIN-05, SEO-01 through SEO-04 | 9 |
 
 ---
 *Requirements defined: 2025-01-19*
-*Last updated: 2025-01-19 after initial definition*
+*Last updated: 2026-01-20 after roadmap creation*
