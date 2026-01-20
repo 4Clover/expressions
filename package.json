@@ -1,0 +1,12 @@
+{
+  "name": "expressions-hair-designs",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Website for Expressions Hair Designs",
+  "scripts": {},
+  "volta": {
+    "node": "24.13.0"
+  },
+  "packageManager": "pnpm@9.15.4"
+}
