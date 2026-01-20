@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Design tokens - to be populated in Plan 3 (Design System) */
+/* This file will contain OKLCH color definitions, typography, spacing */
+
+@theme inline {
+	/* Placeholder values - will be replaced with proper design tokens */
+	--color-background: oklch(0.99 0.002 255);
+	--color-foreground: oklch(0.15 0.01 255);
+}
