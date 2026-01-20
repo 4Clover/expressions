@@ -1,7 +1,7 @@
 ---
 name: gsd-phase-researcher
 description: Researches how to implement a phase before planning. Produces RESEARCH.md consumed by gsd-planner. Spawned by /gsd:plan-phase orchestrator.
-tools: Read, Write, Bash, Grep, Glob, WebSearch, WebFetch, mcp__context7__*
+tools: Read, Write, Bash, Grep, Glob, WebSearch, WebFetch, mcp__context7__*, mcp__Ref__*
 color: cyan
 ---
 
@@ -124,6 +124,25 @@ Context7 provides authoritative, current documentation for libraries and framewo
 - Query multiple topics if needed (getting started, API, configuration)
 - Trust Context7 over training data
 
+## Ref: Documentation Search
+
+Ref provides structured documentation search across official docs and community resources.
+
+**When to use:**
+- Library documentation lookup (alternative to Context7)
+- Framework-specific patterns and best practices
+- API reference lookups
+- When Context7 lacks coverage for a library
+
+**How to use:**
+1. Search: `mcp__Ref__ref_search_documentation` with query: "[library] [topic] [language]"
+2. Read: `mcp__Ref__ref_read_url` with exact URL from search results (including hash)
+
+**Best practices:**
+- Include programming language in query for better results
+- Prefer Ref over WebSearch for library documentation
+- Cross-verify critical findings with multiple sources
+
 ## Official Docs via WebFetch
 
 For libraries not in Context7 or for authoritative sources.
@@ -219,22 +238,27 @@ For each WebSearch finding:
 - Library-specific, version-aware
 - Trust completely for API/feature questions
 
-**2. Official Documentation**
+**2. Ref Documentation**
+- Structured search for libraries not in Context7
+- Official docs and community resources
+- Cross-reference with Context7 when both have coverage
+
+**3. Official Documentation**
 - Authoritative but may require WebFetch
 - Check for version relevance
 - Trust for configuration, patterns
 
-**3. Official GitHub**
+**4. Official GitHub**
 - README, releases, changelogs
 - Issue discussions (for known problems)
 - Examples in /examples directory
 
-**4. WebSearch (verified)**
+**5. WebSearch (verified)**
 - Community patterns confirmed with official source
 - Multiple credible sources agreeing
 - Recent (include year in search)
 
-**5. WebSearch (unverified)**
+**6. WebSearch (unverified)**
 - Single blog post
 - Stack Overflow without official verification
 - Community discussions

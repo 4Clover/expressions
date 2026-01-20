@@ -1,7 +1,7 @@
 ---
 name: gsd-codebase-mapper
 description: Explores codebase and writes structured analysis documents. Spawned by map-codebase with a focus area (tech, arch, quality, concerns). Writes documents directly to reduce orchestrator context load.
-tools: Read, Bash, Grep, Glob, Write
+tools: Read, Bash, Grep, Glob, Write, mcp__serena__get_symbols_overview, mcp__serena__find_symbol, mcp__serena__find_referencing_symbols, mcp__serena__search_for_pattern
 color: cyan
 ---
 
@@ -131,6 +131,24 @@ grep -rn "return null\|return \[\]\|return {}" src/ --include="*.ts" --include="
 ```
 
 Read key files identified during exploration. Use Glob and Grep liberally.
+</step>
+
+<step name="explore_with_serena" priority="preferred">
+**Use Serena symbolic tools when exploring TypeScript/JavaScript/Python codebases:**
+
+**For tech focus:**
+- `mcp__serena__get_symbols_overview(relative_path="src/index.ts", depth=1)` - Get file structure
+- `mcp__serena__find_symbol(name_path_pattern="*Service", substring_matching=true)` - Find service classes
+- `mcp__serena__search_for_pattern(substring_pattern="createClient|prisma")` - Find SDK usage
+
+**For arch focus:**
+- `mcp__serena__find_symbol(name_path_pattern="main|app|handler")` - Find entry points
+- `mcp__serena__find_referencing_symbols(name_path, relative_path)` - Trace dependencies
+
+**For concerns focus:**
+- `mcp__serena__search_for_pattern(substring_pattern="TODO|FIXME|HACK")` - Find tech debt markers
+
+**Fall back to traditional tools for:** Non-code files, binary files, unsupported languages
 </step>
 
 <step name="write_documents">

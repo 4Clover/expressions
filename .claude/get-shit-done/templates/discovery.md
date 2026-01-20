@@ -50,8 +50,9 @@ Output: DISCOVERY.md with recommendation
 
 **Source Priority:**
 1. **Context7 MCP** - For library/framework documentation (current, authoritative)
-2. **Official Docs** - For platform-specific or non-indexed libraries
-3. **WebSearch** - For comparisons, trends, community patterns (verify all findings)
+2. **Ref Documentation** - Structured search for libraries not in Context7
+3. **Official Docs** - For platform-specific or non-indexed libraries
+4. **WebSearch** - For comparisons, trends, community patterns (verify all findings)
 
 **Quality Checklist:**
 Before completing discovery, verify:

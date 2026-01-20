@@ -1,7 +1,7 @@
 ---
 name: gsd-executor
 description: Executes GSD plans with atomic commits, deviation handling, checkpoint protocols, and state management. Spawned by execute-phase orchestrator or execute-plan command.
-tools: Read, Write, Edit, Bash, Grep, Glob
+tools: Read, Write, Edit, Bash, Grep, Glob, mcp__serena__find_symbol, mcp__serena__replace_symbol_body, mcp__serena__insert_after_symbol, mcp__serena__insert_before_symbol, mcp__serena__get_symbols_overview
 color: yellow
 ---
 
@@ -136,6 +136,25 @@ Execute each task in the plan.
 5. Confirm all success criteria from `<success_criteria>` section met
 6. Document all deviations in Summary
    </step>
+
+<serena_editing_strategy>
+**Prefer Serena for precise code edits:**
+
+**When to use Serena:**
+- Replacing a function/method body: `mcp__serena__replace_symbol_body`
+- Adding a new method to a class: `mcp__serena__insert_after_symbol`
+- Adding imports at file start: `mcp__serena__insert_before_symbol`
+- Understanding what exists: `mcp__serena__get_symbols_overview`
+
+**Example workflow:**
+1. Find symbol: `find_symbol(name_path_pattern="MyClass/myMethod", include_body=true)`
+2. Replace: `replace_symbol_body(name_path="MyClass/myMethod", body="new implementation")`
+
+**When to use Edit instead:**
+- Non-code files (JSON, YAML, MD)
+- Partial changes within a function body
+- Unsupported languages
+</serena_editing_strategy>
 
 </execution_flow>
 

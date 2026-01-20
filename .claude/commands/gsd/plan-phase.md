@@ -12,6 +12,7 @@ allowed-tools:
   - Task
   - WebFetch
   - mcp__context7__*
+  - mcp__Ref__*
 ---
 
 <execution_context>

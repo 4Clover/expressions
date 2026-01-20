@@ -9,6 +9,9 @@ allowed-tools:
   - Grep
   - Write
   - Task
+  - mcp__serena__get_symbols_overview
+  - mcp__serena__find_symbol
+  - mcp__serena__search_for_pattern
 ---
 
 <objective>

@@ -12,6 +12,8 @@ allowed-tools:
   - Task
   - TodoWrite
   - AskUserQuestion
+  - mcp__serena__find_symbol
+  - mcp__serena__get_symbols_overview
 ---
 
 <objective>
