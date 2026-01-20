@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '$lib/components/ui/card';
+
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -91,3 +93,15 @@
 		<Button>Schedule appointment</Button>
 	</div>
 </section>
+
+<!-- Database Status (dev only) -->
+{#if data.dbStatus}
+<section class="px-6 py-8 border-t">
+	<div class="mx-auto max-w-2xl">
+		<div class="rounded-lg p-4 text-sm {data.dbStatus === 'connected' ? 'bg-green-50 text-green-800 dark:bg-green-950 dark:text-green-200' : data.dbStatus === 'error' ? 'bg-red-50 text-red-800 dark:bg-red-950 dark:text-red-200' : 'bg-yellow-50 text-yellow-800 dark:bg-yellow-950 dark:text-yellow-200'}">
+			<p class="font-medium">Database Status: {data.dbStatus}</p>
+			<p class="mt-1">{data.message}</p>
+		</div>
+	</div>
+</section>
+{/if}
