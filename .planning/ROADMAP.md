@@ -34,12 +34,12 @@ This roadmap delivers a custom salon website that replaces fragmented Vagaro + S
   3. All interactive components have visible focus indicators and meet 4.5:1 contrast ratio
   4. Touch targets are minimum 24x24px and animations use 500-800ms easing
   5. Database migrations run successfully and Supabase connection is established with RLS enabled
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 01-01: Monorepo and tooling setup
-- [ ] 01-02: Database schema and Supabase connection
-- [ ] 01-03: Design system and component library
+- [ ] 01-01-PLAN.md — Monorepo and tooling setup (Turborepo, SvelteKit, Cloudflare adapter)
+- [ ] 01-02-PLAN.md — Database schema and Supabase connection (Drizzle ORM, RLS policies)
+- [ ] 01-03-PLAN.md — Design system and component library (shadcn-svelte, design tokens)
 
 **Directory:** `.planning/phases/01-foundation/`
 
@@ -168,7 +168,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Not started | - |
+| 1. Foundation | 0/3 | Planned | - |
 | 2. Staff-Services-Content | 0/4 | Not started | - |
 | 3. Booking-Engine | 0/4 | Not started | - |
 | 4. Payments | 0/3 | Not started | - |
