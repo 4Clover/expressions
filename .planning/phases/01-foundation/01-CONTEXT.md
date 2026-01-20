@@ -6,38 +6,50 @@
 <domain>
 ## Phase Boundary
 
-Establish the technical foundation with monorepo structure, database schema, authentication, and a design system that embodies the "quiet luxury" aesthetic. This phase delivers the styled component library and infrastructure that all other phases build upon.
+Establish the technical foundation: monorepo structure, database schema, authentication, and a design system that embodies "quiet luxury." This phase delivers the scaffolding and visual language that all other phases build upon.
 
 </domain>
 
 <decisions>
 ## Implementation Decisions
 
-### Quiet luxury aesthetic
-- Cool neutrals base palette — pure whites, slate grays, charcoal for a sleek, modern feel
-- Gold accents used subtly — thin borders, small icons, hover states; understated elegance, not flashy
-- Modern sans typography throughout (Inter, DM Sans style) — contemporary clean, not traditional serif
-- Overall mood: warm & welcoming — softer edges, friendly imagery, approachable but elevated
+### Color Palette
+- Cool neutrals as the monochromatic base (slate grays, cool whites) — modern, editorial feel
+- Rose gold for accent color — appears on CTAs, highlights, interactive elements
+- High contrast approach — dark text on light backgrounds for readability
+- Pure white backgrounds for main content areas — clean, crisp, lets content pop
 
-### Empty/error states
-- Empty states show helpful guidance text explaining what goes here + what to do next (no illustrations needed)
-- Error messages use friendly, reassuring tone — "Oops, something went wrong. Let's try that again."
-- Loading states use subtle spinners — small, elegant, unobtrusive
+### Typography
+- Modern sans-serif for headings — geometric, refined letterforms (stark but elegant)
+- Bold weight + sentence case for headings — strong, confident hierarchy
+- Generous whitespace throughout — luxury, editorial feel with breathing room
+
+### Component Styling
+- Slightly rounded buttons (4-8px radius) — approachable but not playful
+- Subtle shadows on cards and containers — modern layered depth
+- Rose gold appears as outlines and text, not solid fills — subtle, elegant restraint
+- Slight desaturation on images — muted tones for cohesive palette integration
+
+### Animation
+- Smooth and flowing character — spa-like calm, gentle easing curves
+- Slide transitions between pages — spatial awareness of navigation
+- Subtle lift on hover — slight scale + shadow increase for tactile feedback
+- Key principle: animations aid intuitive navigation, never distract
 
 ### Claude's Discretion
-- Retry behavior — Claude picks inline retry vs refresh guidance based on specific situation
-- Exact spacing values and component sizing
-- Animation timing within the 500-800ms guideline
-- Specific font weights and line heights
-- Focus indicator styling (within accessibility requirements)
+- Body text size (optimize for content type and readability)
+- Loading state implementation (skeleton vs spinner, context-dependent)
+- Exact spacing values within the generous whitespace philosophy
+- Specific easing curves within the smooth/flowing character
 
 </decisions>
 
 <specifics>
 ## Specific Ideas
 
-- "Warm & welcoming" + "cool neutrals" = the palette is sleek/modern but the overall experience feels approachable (achieved through whitespace, friendly copy, softer UI interactions)
-- Gold should feel like jewelry — present but not overwhelming
+- "Modern and stark, but still sleek and elegant" — the typography should feel geometric and refined, not warm or humanist
+- Animations serve navigation, not decoration — transitions should feel like natural movement through space
+- The overall vibe is "quiet luxury" — confident restraint, not flashy
 
 </specifics>
 
