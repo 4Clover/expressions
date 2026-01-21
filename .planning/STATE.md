@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2025-01-19)
 ## Current Position
 
 Phase: 3 of 7 (Booking-Engine)
-Plan: 1 of 4 in current phase
+Plan: 2 of 4 in current phase
 Status: In progress
-Last activity: 2026-01-21 - Completed 03-01-PLAN.md (booking schema foundation)
+Last activity: 2026-01-21 - Completed 03-02-PLAN.md (availability API & wizard UI)
 
-Progress: [████████░░░░░░░░░░░░░░░░] 33% (8/24 plans)
+Progress: [█████████░░░░░░░░░░░░░░░] 37.5% (9/24 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: 5.3 min
-- Total execution time: 42 min
+- Total plans completed: 9
+- Average duration: 5.4 min
+- Total execution time: 49 min
 
 **By Phase:**
 
@@ -29,11 +29,11 @@ Progress: [████████░░░░░░░░░░░░░░░
 |-------|-------|-------|----------|
 | 1. Foundation | 3/3 | 17 min | 5.7 min |
 | 2. Staff-Services-Content | 4/4 | 22 min | 5.5 min |
-| 3. Booking-Engine | 1/4 | 3 min | 3.0 min |
+| 3. Booking-Engine | 2/4 | 10 min | 5.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (7 min), 02-03 (4 min), 02-04 (7 min), 03-01 (3 min)
-- Trend: Stable to improving
+- Last 5 plans: 02-03 (4 min), 02-04 (7 min), 03-01 (3 min), 03-02 (7 min)
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -70,6 +70,10 @@ Recent decisions affecting current work:
 - [03-01]: Text type for time columns (Drizzle time type quirks)
 - [03-01]: Seed script in packages/db/scripts/ (drizzle/ is gitignored)
 - [03-01]: Empty arrow function for RLS policies with sql`true`
+- [03-02]: Local time for slot generation (salon times are local, not UTC)
+- [03-02]: Slot grouping by time of day: Morning/Afternoon/Evening
+- [03-02]: "Any Available" stylist uses 'any' as special staffId value
+- [03-02]: Input component bindable value for Svelte 5 form two-way binding
 
 ### Pending Todos
 
@@ -87,7 +91,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-01-21T13:07:00Z
-Stopped at: Completed 03-01-PLAN.md
+Last session: 2026-01-21T13:16:28Z
+Stopped at: Completed 03-02-PLAN.md
 Resume file: None
-Next action: Execute 03-02-PLAN.md (availability API)
+Next action: Execute 03-03-PLAN.md (booking page)
