@@ -19,7 +19,6 @@ export const load: PageServerLoad = async () => {
   }
 
   try {
-    // Dynamic import to avoid errors when DATABASE_URL is not set
     const { db, services, serviceCategories, staff, staffServices } = await import('@repo/db');
     const { eq, asc } = await import('drizzle-orm');
 
@@ -50,7 +49,7 @@ export const load: PageServerLoad = async () => {
       staffServices: allStaffServices,
     };
   } catch (error) {
-    console.error('Failed to load booking data:', error);
+    console.error('[book/+page.server.ts] Failed to load booking data:', error);
     return {
       services: [],
       categories: [],

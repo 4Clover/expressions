@@ -39,13 +39,101 @@ export const GET: RequestHandler = async ({ url }) => {
 
   try {
     // Dynamically import to avoid errors when DATABASE_URL is not set
-    const { db, staffSchedule, services, appointments } = await import('@repo/db');
-    const { eq, and, gte, lt } = await import('drizzle-orm');
+    const { db, staffSchedule, staff, services, appointments, staffServices } = await import('@repo/db');
+    const { eq, and, gte, lt, inArray } = await import('drizzle-orm');
 
     // Get weekday (0-6, Sunday-Saturday)
     const weekday = date.getDay();
 
-    // Query staffSchedule for this staffId + weekday + isActive=true
+    // Query service for durationMinutes
+    const service = await db.query.services.findFirst({
+      where: eq(services.id, serviceId),
+    });
+
+    if (!service) {
+      return json(
+        { error: 'Service not found' },
+        { status: 404 }
+      );
+    }
+
+    // Create day boundaries
+    const dayStart = new Date(date);
+    dayStart.setHours(0, 0, 0, 0);
+    const dayEnd = new Date(date);
+    dayEnd.setHours(23, 59, 59, 999);
+
+    // Handle "Any Available" stylist
+    if (staffId === 'any') {
+      // Find all staff who offer this service
+      const staffOfferingService = await db.query.staffServices.findMany({
+        where: and(
+          eq(staffServices.serviceId, serviceId),
+          eq(staffServices.isAvailable, true)
+        ),
+      });
+
+      if (staffOfferingService.length === 0) {
+        return json({ slots: [], message: 'No stylists offer this service' });
+      }
+
+      const staffIds = staffOfferingService.map(s => s.staffId);
+
+      // Get schedules for all these staff for this weekday
+      const schedules = await db.query.staffSchedule.findMany({
+        where: and(
+          inArray(staffSchedule.staffId, staffIds),
+          eq(staffSchedule.weekday, weekday),
+          eq(staffSchedule.isActive, true)
+        ),
+      });
+
+      if (schedules.length === 0) {
+        return json({ slots: [], message: 'No stylists available this day' });
+      }
+
+      // Get all bookings for these staff on this date
+      const existingBookings = await db.query.appointments.findMany({
+        where: and(
+          inArray(appointments.staffId, staffIds),
+          gte(appointments.startTime, dayStart),
+          lt(appointments.startTime, dayEnd),
+          eq(appointments.status, 'confirmed')
+        ),
+      });
+
+      // Aggregate slots from all available staff
+      const allSlots = new Map<string, { time: string; staffId: string }>();
+
+      for (const schedule of schedules) {
+        const staffBookings = existingBookings
+          .filter(b => b.staffId === schedule.staffId)
+          .map(b => ({ startTime: b.startTime, endTime: b.endTime }));
+
+        const slots = generateAvailableSlots(
+          date,
+          { startTime: schedule.startTime, endTime: schedule.endTime },
+          staffBookings,
+          service.durationMinutes
+        );
+
+        // Add slots, keeping track of which staff has availability
+        for (const slot of slots) {
+          if (!allSlots.has(slot.time)) {
+            allSlots.set(slot.time, { time: slot.time, staffId: schedule.staffId });
+          }
+        }
+      }
+
+      // Return unique time slots (first available staff will be used at booking time)
+      const uniqueSlots = Array.from(allSlots.values())
+        .map(s => ({ time: s.time }))
+        .sort((a, b) => a.time.localeCompare(b.time));
+
+      return json({ slots: uniqueSlots });
+    }
+
+    // Specific staff selected
     const schedule = await db.query.staffSchedule.findFirst({
       where: and(
         eq(staffSchedule.staffId, staffId),
@@ -60,25 +148,6 @@ export const GET: RequestHandler = async ({ url }) => {
         message: 'Stylist not available this day',
       });
     }
-
-    // Query service for durationMinutes
-    const service = await db.query.services.findFirst({
-      where: eq(services.id, serviceId),
-    });
-
-    if (!service) {
-      return json(
-        { error: 'Service not found' },
-        { status: 404 }
-      );
-    }
-
-    // Query appointments for this staffId on this date with status='confirmed'
-    // Create day boundaries
-    const dayStart = new Date(date);
-    dayStart.setHours(0, 0, 0, 0);
-    const dayEnd = new Date(date);
-    dayEnd.setHours(23, 59, 59, 999);
 
     const existingBookings = await db.query.appointments.findMany({
       where: and(
