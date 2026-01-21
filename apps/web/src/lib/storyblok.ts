@@ -7,6 +7,7 @@ import ServicePreviewCard from '$lib/components/storyblok/ServicePreviewCard.sve
 import StaffHighlights from '$lib/components/storyblok/StaffHighlights.svelte';
 import ContactInfo from '$lib/components/storyblok/ContactInfo.svelte';
 import RichTextBlock from '$lib/components/storyblok/RichTextBlock.svelte';
+import Gallery from '$lib/components/storyblok/Gallery.svelte';
 
 /**
  * Initialize Storyblok SDK with component registration.
@@ -21,7 +22,8 @@ export function initStoryblok() {
 		'service-preview-card': ServicePreviewCard,
 		'staff-highlights': StaffHighlights,
 		'contact-info': ContactInfo,
-		'rich-text-block': RichTextBlock
+		'rich-text-block': RichTextBlock,
+		gallery: Gallery
 	} as unknown as SbSvelteComponentsMap;
 
 	storyblokInit({
