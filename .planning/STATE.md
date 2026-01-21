@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2025-01-19)
 ## Current Position
 
 Phase: 3 of 7 (Booking-Engine)
-Plan: 0 of 4 in current phase
-Status: Ready to plan
-Last activity: 2026-01-21 - Phase 2 verified and complete
+Plan: 1 of 4 in current phase
+Status: In progress
+Last activity: 2026-01-21 - Completed 03-01-PLAN.md (booking schema foundation)
 
-Progress: [███████░░░░░░░░░░░░░░░░░] 29% (7/24 plans)
+Progress: [████████░░░░░░░░░░░░░░░░] 33% (8/24 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 5.6 min
-- Total execution time: 39 min
+- Total plans completed: 8
+- Average duration: 5.3 min
+- Total execution time: 42 min
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [███████░░░░░░░░░░░░░░░░
 |-------|-------|-------|----------|
 | 1. Foundation | 3/3 | 17 min | 5.7 min |
 | 2. Staff-Services-Content | 4/4 | 22 min | 5.5 min |
+| 3. Booking-Engine | 1/4 | 3 min | 3.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (6 min), 02-01 (7 min), 02-03 (4 min), 02-04 (7 min)
-- Trend: Stable
+- Last 5 plans: 02-01 (7 min), 02-03 (4 min), 02-04 (7 min), 03-01 (3 min)
+- Trend: Stable to improving
 
 *Updated after each plan completion*
 
@@ -66,6 +67,9 @@ Recent decisions affecting current work:
 - [02-03]: Staff API uses dynamic import to handle missing DATABASE_URL gracefully
 - [02-04]: URL query params for gallery deep linking (?category=x&stylist=y)
 - [02-04]: CSS-based before/after slider for Svelte 5 compatibility
+- [03-01]: Text type for time columns (Drizzle time type quirks)
+- [03-01]: Seed script in packages/db/scripts/ (drizzle/ is gitignored)
+- [03-01]: Empty arrow function for RLS policies with sql`true`
 
 ### Pending Todos
 
@@ -75,7 +79,6 @@ Recent decisions affecting current work:
 
 ### Blockers/Concerns
 
-- Research flagged: Verify optimistic locking syntax with Drizzle (Phase 3)
 - Research flagged: Confirm Square 2026 API requirements (Phase 4)
 - Research flagged: Test Plivo SMS deliverability in target region (Phase 5)
 - Research flagged: Investigate Google Calendar webhook rate limits (Phase 6)
@@ -84,7 +87,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-01-21T12:15:00Z
-Stopped at: Phase 2 verified - all success criteria passed
+Last session: 2026-01-21T13:07:00Z
+Stopped at: Completed 03-01-PLAN.md
 Resume file: None
-Next action: Plan Phase 3 (Booking-Engine)
+Next action: Execute 03-02-PLAN.md (availability API)
