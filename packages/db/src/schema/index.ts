@@ -23,3 +23,15 @@ export {
   staffScheduleRelations,
   appointmentsRelations
 } from './appointments.js';
+
+// Payments and payment methods
+export {
+  paymentMethodTypeEnum,
+  staffPaymentMethods,
+  staffSquareConfig,
+  payments,
+  processedWebhooks,
+  staffPaymentMethodsRelations,
+  staffSquareConfigRelations,
+  paymentsRelations
+} from './payments.js';
