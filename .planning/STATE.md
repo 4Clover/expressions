@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2025-01-19)
 Phase: 2 of 7 (Staff-Services-Content)
 Plan: 2 of 4 in current phase
 Status: In progress
-Last activity: 2026-01-21 - Completed 02-02-PLAN.md (Storyblok CMS Integration)
+Last activity: 2026-01-21 - Completed 02-01-PLAN.md (Staff and Services Display Pages)
 
 Progress: [█████░░░░░░░░░░░░░░░░░░░] 21% (5/24 plans)
 
@@ -20,18 +20,18 @@ Progress: [█████░░░░░░░░░░░░░░░░░░
 
 **Velocity:**
 - Total plans completed: 5
-- Average duration: 5.4 min
-- Total execution time: 27 min
+- Average duration: 5.6 min
+- Total execution time: 28 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1. Foundation | 3/3 | 17 min | 5.7 min |
-| 2. Staff-Services-Content | 2/4 | 10 min | 5 min |
+| 2. Staff-Services-Content | 2/4 | 11 min | 5.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (5 min), 01-03 (8 min), 02-01 (4 min), 02-02 (6 min)
+- Last 5 plans: 01-02 (5 min), 01-03 (8 min), 02-02 (6 min), 02-01 (7 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -57,12 +57,15 @@ Recent decisions affecting current work:
 - [01-03]: Rose gold accent color for CTAs/highlights
 - [01-03]: Cormorant Garamond (serif, 700) for headings, DM Sans for body
 - [01-03]: Card shadows increased per user feedback (shadow + hover:shadow-lg)
+- [02-01]: RLS policies use anonRole + authenticatedRole for public pages
+- [02-01]: Slug-to-name conversion: jane-doe -> Jane Doe (simple case)
+- [02-01]: Custom price priority: show staff custom price, else service base price
 - [02-02]: Type assertion for Storyblok components (Svelte 5 types stricter than SDK)
 - [02-02]: Rich text fields use any with parameter cast (type incompatibility)
 
 ### Pending Todos
 
-1 pending — `/gsd:check-todos` to review
+1 pending - `/gsd:check-todos` to review
 - Use Claude Chrome for UI design analysis (ui)
 
 ### Blockers/Concerns
@@ -76,7 +79,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-01-21T11:52:39Z
-Stopped at: Completed 02-02-PLAN.md (Storyblok CMS Integration)
+Last session: 2026-01-21T11:53:26Z
+Stopped at: Completed 02-01-PLAN.md (Staff and Services Display Pages)
 Resume file: None
 Next action: Execute 02-03-PLAN.md (Marketing Pages)
