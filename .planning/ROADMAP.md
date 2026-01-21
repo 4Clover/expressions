@@ -18,7 +18,7 @@ This roadmap delivers a custom salon website that replaces fragmented Vagaro + S
 - [x] **Phase 2: Staff-Services-Content** - Staff profiles, service catalog, CMS integration, marketing pages
 - [x] **Phase 3: Booking-Engine** - Availability calculation, booking wizard, cancel/reschedule
 - [x] **Phase 4: Payments** - Square integration, per-stylist payment methods
-- [ ] **Phase 5: Code-Quality-Analysis** - Comprehensive code analysis using documentation sources for production-level correctness
+- [x] **Phase 5: Code-Quality-Analysis** - Comprehensive code analysis using documentation sources for production-level correctness
 - [ ] **Phase 6: Notifications** - Email and SMS confirmations and reminders
 - [ ] **Phase 7: Calendar-Sync** - Google Calendar bi-directional sync
 - [ ] **Phase 8: Admin-SEO-Launch** - Admin dashboard, gallery, SEO optimization, launch hardening
@@ -119,7 +119,7 @@ Plans:
 - [x] 05-01-PLAN.md — ESLint setup and svelte-check error fixes
 - [x] 05-02-PLAN.md — Full ESLint run and codebase pattern verification
 - [x] 05-03-PLAN.md — Pattern documentation and GSD workflow modifications
-- [ ] 05-04-PLAN.md — TypeScript error fixes (gap closure)
+- [x] 05-04-PLAN.md — TypeScript error fixes (gap closure)
 
 **Directory:** `.planning/phases/05-code-quality-analysis/`
 
@@ -212,10 +212,10 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 2. Staff-Services-Content | 4/4 | Complete | 2026-01-21 |
 | 3. Booking-Engine | 4/4 | Complete | 2026-01-21 |
 | 4. Payments | 3/3 | Complete | 2026-01-21 |
-| 5. Code-Quality-Analysis | 3/4 | In Progress | - |
+| 5. Code-Quality-Analysis | 4/4 | Complete | 2026-01-21 |
 | 6. Notifications | 0/3 | Not started | - |
 | 7. Calendar-Sync | 0/3 | Not started | - |
 | 8. Admin-SEO-Launch | 0/4 | Not started | - |
 | 9. Code-Quality-Analysis | 0/1 | Not started | - |
 
-**Total:** 17/29 plans complete
+**Total:** 18/29 plans complete
