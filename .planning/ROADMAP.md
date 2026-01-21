@@ -16,7 +16,7 @@ This roadmap delivers a custom salon website that replaces fragmented Vagaro + S
 
 - [x] **Phase 1: Foundation** - Monorepo, database, auth, design system, base UI components
 - [x] **Phase 2: Staff-Services-Content** - Staff profiles, service catalog, CMS integration, marketing pages
-- [ ] **Phase 3: Booking-Engine** - Availability calculation, booking wizard, cancel/reschedule
+- [x] **Phase 3: Booking-Engine** - Availability calculation, booking wizard, cancel/reschedule
 - [ ] **Phase 4: Payments** - Square integration, per-stylist payment methods
 - [ ] **Phase 5: Notifications** - Email and SMS confirmations and reminders
 - [ ] **Phase 6: Calendar-Sync** - Google Calendar bi-directional sync
@@ -76,10 +76,10 @@ Plans:
 **Plans:** 4 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Schema and dependencies (appointments table, staff schedule, npm packages)
-- [ ] 03-02-PLAN.md — Availability engine and booking UI components
-- [ ] 03-03-PLAN.md — Booking wizard page and confirmation flow
-- [ ] 03-04-PLAN.md — Cancel and reschedule flows
+- [x] 03-01-PLAN.md — Schema and dependencies (appointments table, staff schedule, npm packages)
+- [x] 03-02-PLAN.md — Availability engine and booking UI components
+- [x] 03-03-PLAN.md — Booking wizard page and confirmation flow
+- [x] 03-04-PLAN.md — Cancel and reschedule flows
 
 **Directory:** `.planning/phases/03-booking-engine/`
 
@@ -170,10 +170,10 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-01-21 |
 | 2. Staff-Services-Content | 4/4 | Complete | 2026-01-21 |
-| 3. Booking-Engine | 0/4 | Planned | - |
+| 3. Booking-Engine | 4/4 | Complete | 2026-01-21 |
 | 4. Payments | 0/3 | Not started | - |
 | 5. Notifications | 0/3 | Not started | - |
 | 6. Calendar-Sync | 0/3 | Not started | - |
 | 7. Admin-SEO-Launch | 0/4 | Not started | - |
 
-**Total:** 7/24 plans complete
+**Total:** 11/24 plans complete

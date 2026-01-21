@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2025-01-19)
 
 **Core value:** Get the salon visible on Google with a professional custom site
-**Current focus:** Phase 3 - Booking-Engine
+**Current focus:** Phase 4 - Payments
 
 ## Current Position
 
-Phase: 3 of 7 (Booking-Engine)
-Plan: 3 of 4 in current phase
-Status: In progress
-Last activity: 2026-01-21 - Completed 03-03-PLAN.md (booking page & confirmation)
+Phase: 4 of 7 (Payments)
+Plan: 0 of 3 in current phase
+Status: Ready to plan
+Last activity: 2026-01-21 - Phase 3 verified and complete
 
-Progress: [██████████░░░░░░░░░░░░░░] 41.7% (10/24 plans)
+Progress: [███████████░░░░░░░░░░░░░] 46% (11/24 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: 5.3 min
-- Total execution time: 53 min
+- Total plans completed: 11
+- Average duration: 5.2 min
+- Total execution time: 57 min
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [██████████░░░░░░░░░░░░░
 |-------|-------|-------|----------|
 | 1. Foundation | 3/3 | 17 min | 5.7 min |
 | 2. Staff-Services-Content | 4/4 | 22 min | 5.5 min |
-| 3. Booking-Engine | 3/4 | 17 min | 5.7 min |
+| 3. Booking-Engine | 4/4 | 18 min | 4.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-04 (7 min), 03-01 (3 min), 03-02 (7 min), 03-03 (7 min)
+- Last 5 plans: 03-01 (3 min), 03-02 (7 min), 03-03 (7 min), 03-04 (4 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -77,6 +77,8 @@ Recent decisions affecting current work:
 - [03-03]: Wizard state via $state rune (no external state library for linear flow)
 - [03-03]: "Any Available" staffId='any' resolved at POST time to first available staff
 - [03-03]: ICS download via Blob and URL.createObjectURL for client-side generation
+- [03-04]: Reschedule as cancel + rebook (per CONTEXT.md decision)
+- [03-04]: 24-hour policy soft-enforced for demo (always allow cancellation)
 
 ### Pending Todos
 
@@ -94,7 +96,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-01-21T13:24:44Z
-Stopped at: Completed 03-03-PLAN.md
+Last session: 2026-01-21T13:30:00Z
+Stopped at: Phase 3 verified - all success criteria passed
 Resume file: None
-Next action: Execute 03-04-PLAN.md (cancel & reschedule flow)
+Next action: Plan Phase 4 (Payments)

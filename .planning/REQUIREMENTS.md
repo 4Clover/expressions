@@ -9,14 +9,14 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Booking
 
-- [ ] **BOOK-01**: Customer can browse services organized by category
-- [ ] **BOOK-02**: Customer can select stylist with real-time availability shown
-- [ ] **BOOK-03**: Customer can pick date/time from available slots
-- [ ] **BOOK-04**: System prevents double-booking via optimistic locking
-- [ ] **BOOK-05**: Customer can cancel appointment online (within policy window)
-- [ ] **BOOK-06**: Customer can reschedule appointment online
+- [x] **BOOK-01**: Customer can browse services organized by category
+- [x] **BOOK-02**: Customer can select stylist with real-time availability shown
+- [x] **BOOK-03**: Customer can pick date/time from available slots
+- [x] **BOOK-04**: System prevents double-booking via optimistic locking
+- [x] **BOOK-05**: Customer can cancel appointment online (within policy window)
+- [x] **BOOK-06**: Customer can reschedule appointment online
 - [ ] **BOOK-07**: Stylist calendar syncs with Google Calendar (bi-directional)
-- [ ] **BOOK-08**: Deposit can be collected for no-show protection (card-on-file)
+- [x] **BOOK-08**: Deposit can be collected for no-show protection (card-on-file)
 
 ### Payments
 
