@@ -69,8 +69,9 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-1 pending - `/gsd:check-todos` to review
+2 pending - `/gsd:check-todos` to review
 - Use Claude Chrome for UI design analysis (ui)
+- Review Phase 3 deferred features for feature completeness (booking) - see `.planning/phases/03-booking-engine/03-CONTEXT.md`
 
 ### Blockers/Concerns
 
