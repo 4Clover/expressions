@@ -5,6 +5,7 @@
  * with the @repo/db package which reads DATABASE_URL from process.env.
  */
 
+import type { Handle } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
 
 // Inject DATABASE_URL into process.env for @repo/db compatibility
@@ -27,6 +28,6 @@ if (env.SQUARE_ENVIRONMENT) {
   process.env.SQUARE_ENVIRONMENT = env.SQUARE_ENVIRONMENT;
 }
 
-export const handle = async ({ event, resolve }) => {
+export const handle: Handle = async ({ event, resolve }) => {
   return resolve(event);
 };
