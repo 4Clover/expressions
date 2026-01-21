@@ -110,7 +110,7 @@
 
   <!-- Individual stylists -->
   <div class="grid gap-4 sm:grid-cols-2">
-    {#each availableStaff as stylist}
+    {#each availableStaff as stylist (stylist.id)}
       <button
         type="button"
         class="text-left w-full"
@@ -161,7 +161,7 @@
               {/if}
               {#if stylist.specialties && stylist.specialties.length > 0}
                 <div class="flex flex-wrap gap-1 mt-2">
-                  {#each stylist.specialties.slice(0, 3) as specialty}
+                  {#each stylist.specialties.slice(0, 3) as specialty (specialty)}
                     <Badge variant="secondary" class="text-xs px-1.5 py-0">
                       {specialty}
                     </Badge>

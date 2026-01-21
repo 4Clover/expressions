@@ -64,7 +64,7 @@
     <div class="space-y-4">
       <div class="h-4 bg-muted rounded w-20 animate-pulse"></div>
       <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
-        {#each Array(8) as _}
+        {#each { length: 8 } as _, i (i)}
           <div class="h-10 bg-muted animate-pulse rounded-md"></div>
         {/each}
       </div>
@@ -80,7 +80,7 @@
       <div class="space-y-2">
         <h4 class="text-sm font-medium text-muted-foreground">Morning</h4>
         <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
-          {#each groupedSlots.morning as slot}
+          {#each groupedSlots.morning as slot (slot.start.getTime())}
             <Button
               variant={isSlotSelected(slot) ? 'default' : 'outline'}
               size="sm"
@@ -97,7 +97,7 @@
       <div class="space-y-2">
         <h4 class="text-sm font-medium text-muted-foreground">Afternoon</h4>
         <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
-          {#each groupedSlots.afternoon as slot}
+          {#each groupedSlots.afternoon as slot (slot.start.getTime())}
             <Button
               variant={isSlotSelected(slot) ? 'default' : 'outline'}
               size="sm"
@@ -114,7 +114,7 @@
       <div class="space-y-2">
         <h4 class="text-sm font-medium text-muted-foreground">Evening</h4>
         <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
-          {#each groupedSlots.evening as slot}
+          {#each groupedSlots.evening as slot (slot.start.getTime())}
             <Button
               variant={isSlotSelected(slot) ? 'default' : 'outline'}
               size="sm"

@@ -90,7 +90,7 @@
 
   <!-- Day grid -->
   <div class="grid grid-cols-7 gap-1 sm:gap-2">
-    {#each days as day}
+    {#each days as day (day.getTime())}
       {@const isAvailable = hasAvailability(day) && !isPast(day)}
       {@const isSelected = selectedDate && isSameDay(day, selectedDate)}
       <button

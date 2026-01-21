@@ -52,7 +52,7 @@
 </script>
 
 <div class="space-y-3">
-  {#each methods as method}
+  {#each methods as method (method.methodType)}
     {@const config = methodConfig[method.methodType]}
     {@const link = method.handle ? config.getLink(method.handle) : null}
 

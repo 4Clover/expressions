@@ -40,7 +40,7 @@
 
   // Group services by category
   let groupedServices = $derived.by(() => {
-    const grouped = new Map<string, { category: Category | null; services: Service[] }>();
+    const grouped: Map<string, { category: Category | null; services: Service[] }> = new Map();
 
     // Initialize with categories
     for (const category of categories) {
@@ -62,9 +62,8 @@
     }
 
     // Filter out empty groups
-    return Array.from(grouped.entries())
-      .filter(([_, g]) => g.services.length > 0)
-      .map(([_, g]) => g);
+    return Array.from(grouped.values())
+      .filter(g => g.services.length > 0);
   });
 
   function formatDuration(minutes: number): string {
@@ -90,13 +89,13 @@
     <p class="text-muted-foreground mt-1">Select the service you'd like to book</p>
   </div>
 
-  {#each groupedServices as group}
+  {#each groupedServices as group (group.category?.id ?? 'ungrouped')}
     <div class="space-y-4">
       {#if group.category}
         <h3 class="font-heading text-lg font-medium text-muted-foreground">{group.category.name}</h3>
       {/if}
       <div class="grid gap-4 sm:grid-cols-2">
-        {#each group.services as service}
+        {#each group.services as service (service.id)}
           <button
             type="button"
             class="text-left w-full"

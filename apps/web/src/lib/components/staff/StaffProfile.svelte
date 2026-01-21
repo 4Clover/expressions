@@ -36,7 +36,7 @@
 
   // Group services by category
   let servicesByCategory = $derived.by(() => {
-    const grouped = new Map<string, { name: string; services: (StaffService & { displayPrice: number })[] }>();
+    const grouped: Map<string, { name: string; services: (StaffService & { displayPrice: number })[] }> = new Map();
 
     for (const ss of staffMember.staffServices) {
       const categoryName = ss.service.category?.name ?? "Other Services";
@@ -119,7 +119,7 @@
         <div>
           <h2 class="font-heading text-xl font-semibold mb-3">Specialties</h2>
           <div class="flex flex-wrap gap-2">
-            {#each staffMember.specialties as specialty}
+            {#each staffMember.specialties as specialty (specialty)}
               <span
                 class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-accent text-accent-foreground"
               >
@@ -139,7 +139,7 @@
         Services by {staffMember.displayName}
       </h2>
 
-      {#each servicesByCategory as category}
+      {#each servicesByCategory as category (category.name)}
         <div class="space-y-4">
           <h3 class="font-heading text-xl font-semibold text-muted-foreground">
             {category.name}

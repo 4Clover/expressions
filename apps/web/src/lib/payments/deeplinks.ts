@@ -45,6 +45,9 @@ export function generateCashAppLink(
  * Zelle has no universal deep link - returns null
  * Display Zelle info with instructions to use bank app
  */
-export function generateZelleLink(_email: string): null {
-  return null; // Zelle is bank-integrated only, no deep link
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function generateZelleLink(email: string): null {
+  // Zelle is bank-integrated only, no deep link available
+  // Email parameter kept for API consistency with other payment link generators
+  return null;
 }

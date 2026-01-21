@@ -56,7 +56,7 @@
     {#if staff.specialties && staff.specialties.length > 0}
       <CardContent class="pt-0">
         <div class="flex flex-wrap gap-1.5">
-          {#each staff.specialties as specialty}
+          {#each staff.specialties as specialty (specialty)}
             <span
               class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-accent text-accent-foreground"
             >

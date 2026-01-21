@@ -21,7 +21,7 @@
 
 <div class={cn("mb-8", className)}>
   <div class="flex items-center justify-between">
-    {#each steps as _, i}
+    {#each steps as _, i (i)}
       <div class="flex items-center">
         <div
           class={cn(
@@ -54,11 +54,11 @@
   </div>
   <!-- Step labels -->
   <div class="flex justify-between mt-2 text-xs sm:text-sm text-muted-foreground">
-    {#each steps as step, i}
+    {#each steps as stepLabel, i (i)}
       <span class={cn(
         "w-8 sm:w-auto text-center",
         i + 1 === currentStep && "text-foreground font-medium"
-      )}>{step}</span>
+      )}>{stepLabel}</span>
     {/each}
   </div>
 </div>

@@ -62,7 +62,7 @@
 
       // Success - update state
       isCancelled = true;
-    } catch (e) {
+    } catch {
       error = 'An error occurred. Please try again.';
     } finally {
       isSubmitting = false;
