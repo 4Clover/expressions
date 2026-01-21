@@ -12,7 +12,7 @@ import { isBefore, subHours } from 'date-fns';
 export interface BookingCustomerData {
   customerName: string;
   customerEmail: string;
-  customerPhone?: string;
+  customerPhone?: string | undefined;
 }
 
 /**
