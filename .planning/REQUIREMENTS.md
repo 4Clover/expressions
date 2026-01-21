@@ -20,10 +20,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Payments
 
-- [ ] **PAY-01**: Each stylist has configurable payment methods in their profile
-- [ ] **PAY-02**: Customer can choose "pay at salon" when booking
-- [ ] **PAY-03**: Stylist's preferred payment methods displayed (Venmo handle, Zelle, cash)
-- [ ] **PAY-04**: Stylists can optionally enable Square for online payment
+- [x] **PAY-01**: Each stylist has configurable payment methods in their profile
+- [x] **PAY-02**: Customer can choose "pay at salon" when booking
+- [x] **PAY-03**: Stylist's preferred payment methods displayed (Venmo handle, Zelle, cash)
+- [x] **PAY-04**: Stylists can optionally enable Square for online payment
 
 ### Staff & Services
 

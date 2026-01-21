@@ -17,7 +17,7 @@ This roadmap delivers a custom salon website that replaces fragmented Vagaro + S
 - [x] **Phase 1: Foundation** - Monorepo, database, auth, design system, base UI components
 - [x] **Phase 2: Staff-Services-Content** - Staff profiles, service catalog, CMS integration, marketing pages
 - [x] **Phase 3: Booking-Engine** - Availability calculation, booking wizard, cancel/reschedule
-- [ ] **Phase 4: Payments** - Square integration, per-stylist payment methods
+- [x] **Phase 4: Payments** - Square integration, per-stylist payment methods
 - [ ] **Phase 5: Notifications** - Email and SMS confirmations and reminders
 - [ ] **Phase 6: Calendar-Sync** - Google Calendar bi-directional sync
 - [ ] **Phase 7: Admin-SEO-Launch** - Admin dashboard, gallery, SEO optimization, launch hardening
@@ -95,9 +95,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Payment schema and stylist configuration (payment methods, Square config, deposits)
-- [ ] 04-02-PLAN.md — Square OAuth and online payment (OAuth flow, payment links, webhooks)
-- [ ] 04-03-PLAN.md — Pay-at-salon flow and booking integration (PaymentStep, deep links, confirmation)
+- [x] 04-01-PLAN.md — Payment schema and stylist configuration (payment methods, Square config, deposits)
+- [x] 04-02-PLAN.md — Square OAuth and online payment (OAuth flow, payment links, webhooks)
+- [x] 04-03-PLAN.md — Pay-at-salon flow and booking integration (PaymentStep, deep links, confirmation)
 
 **Directory:** `.planning/phases/04-payments/`
 
@@ -171,9 +171,9 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 1. Foundation | 3/3 | Complete | 2026-01-21 |
 | 2. Staff-Services-Content | 4/4 | Complete | 2026-01-21 |
 | 3. Booking-Engine | 4/4 | Complete | 2026-01-21 |
-| 4. Payments | 0/3 | Planned | - |
+| 4. Payments | 3/3 | Complete | 2026-01-21 |
 | 5. Notifications | 0/3 | Not started | - |
 | 6. Calendar-Sync | 0/3 | Not started | - |
 | 7. Admin-SEO-Launch | 0/4 | Not started | - |
 
-**Total:** 11/24 plans complete
+**Total:** 14/24 plans complete
