@@ -3,13 +3,14 @@
    * Booking Confirmation Page
    *
    * Shows appointment details after successful booking with ICS download option.
-   * Displays service, stylist, date/time, customer info, and cancel link.
+   * Displays service, stylist, date/time, customer info, payment status, and cancel link.
    */
 
   import { format } from 'date-fns';
   import { Card, CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';
   import { Button } from '$lib/components/ui/button';
   import PriceDisplay from '$lib/components/services/PriceDisplay.svelte';
+  import { PaymentMethodDisplay } from '$lib/components/payments';
   import { generateICS, formatDuration } from '$lib/booking/ics';
 
   let { data } = $props();
@@ -20,6 +21,12 @@
 
   // Salon location (hardcoded for now, can be CMS-driven later)
   const SALON_LOCATION = 'Expressions Hair Designs, 123 Main St, City, State';
+
+  // Payment status helpers
+  let paymentPaid = $derived(data.payment?.status === 'completed');
+  let paymentAmount = $derived(
+    data.payment ? `$${(data.payment.amountCents / 100).toFixed(2)}` : null
+  );
 
   /**
    * Download ICS calendar file
@@ -163,6 +170,42 @@
         </div>
       </CardContent>
     </Card>
+
+    <!-- Payment Status Card -->
+    {#if paymentPaid}
+      <!-- Deposit Paid -->
+      <Card class="mb-6 border-green-200 dark:border-green-900">
+        <CardContent class="pt-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold text-green-700 dark:text-green-400">Deposit Paid</p>
+              <p class="text-sm text-muted-foreground">{paymentAmount} paid via Square</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    {:else if data.staffPaymentMethods.length > 0}
+      <!-- Pay at Salon - Show Payment Methods -->
+      <Card class="mb-6">
+        <CardHeader>
+          <CardTitle class="font-heading text-lg">How to Pay</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p class="text-sm text-muted-foreground mb-4">
+            Pay your stylist directly using one of these methods:
+          </p>
+          <PaymentMethodDisplay
+            methods={data.staffPaymentMethods}
+            serviceName={data.service.name}
+          />
+        </CardContent>
+      </Card>
+    {/if}
 
     <!-- Customer Info Card -->
     <Card class="mb-6">

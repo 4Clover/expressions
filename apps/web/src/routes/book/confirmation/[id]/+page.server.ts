@@ -2,6 +2,7 @@
  * Confirmation page server-side data loading
  *
  * Loads appointment by ID with staff and service details for confirmation display.
+ * Also loads payment status and staff payment methods for pay-at-salon display.
  */
 
 import type { PageServerLoad } from './$types';
@@ -17,8 +18,8 @@ export const load: PageServerLoad = async ({ params }) => {
 
   try {
     // Dynamic import to handle missing DATABASE_URL gracefully
-    const { db, appointments } = await import('@repo/db');
-    const { eq } = await import('drizzle-orm');
+    const { db, appointments, payments, staffPaymentMethods } = await import('@repo/db');
+    const { eq, and, asc } = await import('drizzle-orm');
 
     // Query appointment by ID with staff and service details
     const appointment = await db.query.appointments.findFirst({
@@ -35,6 +36,20 @@ export const load: PageServerLoad = async ({ params }) => {
         message: 'Appointment not found',
       });
     }
+
+    // Load payment status for this appointment
+    const payment = await db.query.payments.findFirst({
+      where: eq(payments.appointmentId, id),
+    });
+
+    // Load staff payment methods for pay-at-salon display
+    const paymentMethods = await db.query.staffPaymentMethods.findMany({
+      where: and(
+        eq(staffPaymentMethods.staffId, appointment.staffId),
+        eq(staffPaymentMethods.isEnabled, true)
+      ),
+      orderBy: [asc(staffPaymentMethods.displayOrder)],
+    });
 
     // Return appointment details (serialize dates for client)
     return {
@@ -61,6 +76,18 @@ export const load: PageServerLoad = async ({ params }) => {
         priceMin: appointment.service.priceMin,
         priceMax: appointment.service.priceMax,
       },
+      payment: payment
+        ? {
+            status: payment.status,
+            amountCents: payment.amountCents,
+            paymentMethod: payment.paymentMethod,
+          }
+        : null,
+      staffPaymentMethods: paymentMethods.map(pm => ({
+        methodType: pm.methodType,
+        handle: pm.handle,
+        displayName: pm.displayName,
+      })),
     };
   } catch (err) {
     // Re-throw SvelteKit errors
