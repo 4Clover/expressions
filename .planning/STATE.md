@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2025-01-19)
 
 **Core value:** Get the salon visible on Google with a professional custom site
-**Current focus:** Phase 4 - Payments (COMPLETE)
+**Current focus:** Phase 5 - Code-Quality-Analysis (NOT STARTED)
 
 ## Current Position
 
-Phase: 4 of 7 (Payments) - COMPLETE
-Plan: 3 of 3 in current phase (PHASE COMPLETE)
+Phase: 5 of 9 (Code-Quality-Analysis) - NOT STARTED
+Plan: 0 of 1 in current phase
 Status: Phase 4 complete, ready for Phase 5
-Last activity: 2026-01-21 - Completed 04-03-PLAN.md (Payment UI Integration)
+Last activity: 2026-01-21 - Roadmap restructured (Phases 5 & 9 added)
 
-Progress: [██████████████████░░░░░░] 58% (14/24 plans)
+Progress: [██████████████░░░░░░░░░░] 54% (14/26 plans)
 
 ## Performance Metrics
 
@@ -94,6 +94,14 @@ Recent decisions affecting current work:
 - [04-03]: Payment completion page polls for webhook status with max 10 attempts
 - [04-03]: Deposit-required services must use Square online payment
 
+### Roadmap Evolution
+
+- Phase 5 inserted: Code-Quality-Analysis (mid-project quality gate)
+- Phase 9 added: Code-Quality-Analysis (final production pass)
+- Old Phase 5 (Notifications) → Phase 6
+- Old Phase 6 (Calendar-Sync) → Phase 7
+- Old Phase 7 (Admin-SEO-Launch) → Phase 8
+
 ### Pending Todos
 
 2 pending - `/gsd:check-todos` to review
@@ -102,15 +110,15 @@ Recent decisions affecting current work:
 
 ### Blockers/Concerns
 
-- Research flagged: Test Plivo SMS deliverability in target region (Phase 5)
-- Research flagged: Investigate Google Calendar webhook rate limits (Phase 6)
+- Research flagged: Test Plivo SMS deliverability in target region (Phase 6)
+- Research flagged: Investigate Google Calendar webhook rate limits (Phase 7)
 - User setup required: Supabase project with DATABASE_URL for db:push
 - User setup required: Storyblok space with VITE_STORYBLOK_ACCESS_TOKEN for CMS content
 - User setup required: Square Developer Dashboard with SQUARE_* environment variables
 
 ## Session Continuity
 
-Last session: 2026-01-21T15:15:00Z
-Stopped at: Completed 04-03-PLAN.md (Payment UI Integration) - PHASE 4 COMPLETE
+Last session: 2026-01-21T16:26:00Z
+Stopped at: Roadmap restructured - Phases 5 & 9 (Code-Quality-Analysis) added
 Resume file: None
-Next action: Plan Phase 5 (Notifications) - `/gsd:plan-phase 5`
+Next action: Plan Phase 5 (Code-Quality-Analysis) - `/gsd:plan-phase 5`

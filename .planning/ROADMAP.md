@@ -1,7 +1,7 @@
 # Roadmap: Expressions Hair Designs
 
 **Created:** 2026-01-20
-**Phases:** 7
+**Phases:** 9
 **Requirements:** 46 mapped
 
 ## Overview
@@ -18,9 +18,11 @@ This roadmap delivers a custom salon website that replaces fragmented Vagaro + S
 - [x] **Phase 2: Staff-Services-Content** - Staff profiles, service catalog, CMS integration, marketing pages
 - [x] **Phase 3: Booking-Engine** - Availability calculation, booking wizard, cancel/reschedule
 - [x] **Phase 4: Payments** - Square integration, per-stylist payment methods
-- [ ] **Phase 5: Notifications** - Email and SMS confirmations and reminders
-- [ ] **Phase 6: Calendar-Sync** - Google Calendar bi-directional sync
-- [ ] **Phase 7: Admin-SEO-Launch** - Admin dashboard, gallery, SEO optimization, launch hardening
+- [ ] **Phase 5: Code-Quality-Analysis** - Comprehensive code analysis using documentation sources for production-level correctness
+- [ ] **Phase 6: Notifications** - Email and SMS confirmations and reminders
+- [ ] **Phase 7: Calendar-Sync** - Google Calendar bi-directional sync
+- [ ] **Phase 8: Admin-SEO-Launch** - Admin dashboard, gallery, SEO optimization, launch hardening
+- [ ] **Phase 9: Code-Quality-Analysis** - Final code quality pass before production deployment
 
 ## Phase Details
 
@@ -101,9 +103,26 @@ Plans:
 
 **Directory:** `.planning/phases/04-payments/`
 
-### Phase 5: Notifications
+### Phase 5: Code-Quality-Analysis
+**Goal**: Establish industry/production levels of minimal, objectively correct, and error-free code through comprehensive analysis using ESLint, Svelte checks, and TypeScript type-checking.
+**Depends on**: Phase 4
+**Requirements**: None (quality gate)
+**Success Criteria** (what must be TRUE):
+  1. Zero ESLint errors across entire codebase
+  2. Zero Svelte check warnings/errors
+  3. Zero TypeScript type errors in strict mode
+  4. All code patterns align with official documentation (verified via Ref/Context7)
+  5. No deprecated API usage identified
+**Plans**: TBD
+
+Plans:
+- [ ] 05-01: TBD (run /gsd:plan-phase 5 to break down)
+
+**Directory:** `.planning/phases/05-code-quality-analysis/`
+
+### Phase 6: Notifications
 **Goal**: Reduce no-shows and keep customers informed through automated email and SMS confirmations and reminders.
-**Depends on**: Phase 3
+**Depends on**: Phase 4
 **Requirements**: NOTIF-01, NOTIF-02, NOTIF-03, NOTIF-04, NOTIF-05
 **Success Criteria** (what must be TRUE):
   1. Customer receives booking confirmation via email immediately after booking
@@ -114,15 +133,15 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 05-01: Email templates and Resend integration
-- [ ] 05-02: SMS integration (Plivo)
-- [ ] 05-03: Reminder scheduler (Cloudflare Cron)
+- [ ] 06-01: Email templates and Resend integration
+- [ ] 06-02: SMS integration (Plivo)
+- [ ] 06-03: Reminder scheduler (Cloudflare Cron)
 
-**Directory:** `.planning/phases/05-notifications/`
+**Directory:** `.planning/phases/06-notifications/`
 
-### Phase 6: Calendar-Sync
+### Phase 7: Calendar-Sync
 **Goal**: Enable bi-directional Google Calendar sync so stylists can manage their schedule from their preferred calendar app.
-**Depends on**: Phase 3
+**Depends on**: Phase 4
 **Requirements**: BOOK-07
 **Success Criteria** (what must be TRUE):
   1. Stylist can connect their Google Calendar via OAuth
@@ -132,15 +151,15 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 06-01: Google OAuth and calendar connection
-- [ ] 06-02: Outbound sync (booking to calendar)
-- [ ] 06-03: Inbound sync (calendar to booking)
+- [ ] 07-01: Google OAuth and calendar connection
+- [ ] 07-02: Outbound sync (booking to calendar)
+- [ ] 07-03: Inbound sync (calendar to booking)
 
-**Directory:** `.planning/phases/06-calendar-sync/`
+**Directory:** `.planning/phases/07-calendar-sync/`
 
-### Phase 7: Admin-SEO-Launch
+### Phase 8: Admin-SEO-Launch
 **Goal**: Empower the owner with intuitive admin tools and achieve the core project goal — Google visibility through proper SEO implementation.
-**Depends on**: Phase 4, Phase 5, Phase 6
+**Depends on**: Phase 5, Phase 6, Phase 7
 **Requirements**: ADMIN-01, ADMIN-02, ADMIN-03, ADMIN-04, ADMIN-05, SEO-01, SEO-02, SEO-03, SEO-04
 **Success Criteria** (what must be TRUE):
   1. Owner can view booking calendar and manage appointments without technical knowledge
@@ -153,18 +172,36 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 07-01: Admin dashboard and booking management
-- [ ] 07-02: SEO implementation (schema, meta, GBP)
-- [ ] 07-03: Performance optimization (Core Web Vitals)
-- [ ] 07-04: Launch hardening and testing
+- [ ] 08-01: Admin dashboard and booking management
+- [ ] 08-02: SEO implementation (schema, meta, GBP)
+- [ ] 08-03: Performance optimization (Core Web Vitals)
+- [ ] 08-04: Launch hardening and testing
 
-**Directory:** `.planning/phases/07-admin-seo-launch/`
+**Directory:** `.planning/phases/08-admin-seo-launch/`
+
+### Phase 9: Code-Quality-Analysis
+**Goal**: Final production-readiness code quality pass ensuring all new code from Phases 6-8 meets the same standards established in Phase 5.
+**Depends on**: Phase 8
+**Requirements**: None (quality gate)
+**Success Criteria** (what must be TRUE):
+  1. Zero ESLint errors across entire codebase
+  2. Zero Svelte check warnings/errors
+  3. Zero TypeScript type errors in strict mode
+  4. All code patterns align with official documentation (verified via Ref/Context7)
+  5. No deprecated API usage identified
+  6. Production build succeeds without warnings
+**Plans**: TBD
+
+Plans:
+- [ ] 09-01: TBD (run /gsd:plan-phase 9 to break down)
+
+**Directory:** `.planning/phases/09-code-quality-analysis/`
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
-(Note: Phases 4, 5, 6 can potentially run in parallel after Phase 3)
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
+(Note: Phases 6, 7 can potentially run in parallel after Phase 5)
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -172,8 +209,10 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 2. Staff-Services-Content | 4/4 | Complete | 2026-01-21 |
 | 3. Booking-Engine | 4/4 | Complete | 2026-01-21 |
 | 4. Payments | 3/3 | Complete | 2026-01-21 |
-| 5. Notifications | 0/3 | Not started | - |
-| 6. Calendar-Sync | 0/3 | Not started | - |
-| 7. Admin-SEO-Launch | 0/4 | Not started | - |
+| 5. Code-Quality-Analysis | 0/1 | Not started | - |
+| 6. Notifications | 0/3 | Not started | - |
+| 7. Calendar-Sync | 0/3 | Not started | - |
+| 8. Admin-SEO-Launch | 0/4 | Not started | - |
+| 9. Code-Quality-Analysis | 0/1 | Not started | - |
 
-**Total:** 14/24 plans complete
+**Total:** 14/26 plans complete
