@@ -2,12 +2,15 @@
 export { profiles } from './profiles.js';
 
 // Staff management
-export { staff } from './staff.js';
+export { staff, staffRelations } from './staff.js';
 
 // Services and pricing
 export {
   priceTypeEnum,
   serviceCategories,
   services,
-  staffServices
+  staffServices,
+  serviceCategoriesRelations,
+  servicesRelations,
+  staffServicesRelations
 } from './services.js';
