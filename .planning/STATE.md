@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2025-01-19)
 ## Current Position
 
 Phase: 4 of 7 (Payments)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-01-21 - Phase 3 verified and complete
+Plan: 1 of 3 in current phase
+Status: In progress
+Last activity: 2026-01-21 - Completed 04-01-PLAN.md (Payment Schema Foundation)
 
-Progress: [███████████░░░░░░░░░░░░░] 46% (11/24 plans)
+Progress: [████████████░░░░░░░░░░░░] 50% (12/24 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
-- Average duration: 5.2 min
-- Total execution time: 57 min
+- Total plans completed: 12
+- Average duration: 5.4 min
+- Total execution time: 65 min
 
 **By Phase:**
 
@@ -30,9 +30,10 @@ Progress: [███████████░░░░░░░░░░░░
 | 1. Foundation | 3/3 | 17 min | 5.7 min |
 | 2. Staff-Services-Content | 4/4 | 22 min | 5.5 min |
 | 3. Booking-Engine | 4/4 | 18 min | 4.5 min |
+| 4. Payments | 1/3 | 8 min | 8.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (3 min), 03-02 (7 min), 03-03 (7 min), 03-04 (4 min)
+- Last 5 plans: 03-02 (7 min), 03-03 (7 min), 03-04 (4 min), 04-01 (8 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -79,6 +80,10 @@ Recent decisions affecting current work:
 - [03-03]: ICS download via Blob and URL.createObjectURL for client-side generation
 - [03-04]: Reschedule as cancel + rebook (per CONTEXT.md decision)
 - [03-04]: 24-hour policy soft-enforced for demo (always allow cancellation)
+- [04-01]: P2P payment types as enum (venmo, cashapp, zelle, cash)
+- [04-01]: Square OAuth tokens per-staff with Supabase Vault encryption note
+- [04-01]: Webhook idempotency via processedWebhooks with eventId PK
+- [04-01]: Deposit config on services (depositRequired + depositAmountCents)
 
 ### Pending Todos
 
@@ -96,7 +101,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-01-21T13:30:00Z
-Stopped at: Phase 3 verified - all success criteria passed
+Last session: 2026-01-21T13:53:00Z
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None
-Next action: Plan Phase 4 (Payments)
+Next action: Execute 04-02-PLAN.md (Square OAuth & Payment Links)
