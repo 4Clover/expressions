@@ -14,3 +14,12 @@ export {
   servicesRelations,
   staffServicesRelations
 } from './services.js';
+
+// Appointments and scheduling
+export {
+  appointmentStatusEnum,
+  staffSchedule,
+  appointments,
+  staffScheduleRelations,
+  appointmentsRelations
+} from './appointments.js';
