@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2025-01-19)
 
 **Core value:** Get the salon visible on Google with a professional custom site
-**Current focus:** Phase 5 - Code-Quality-Analysis (Plan 01 COMPLETE)
+**Current focus:** Phase 5 - Code-Quality-Analysis (Plan 03 COMPLETE)
 
 ## Current Position
 
 Phase: 5 of 9 (Code-Quality-Analysis) - IN PROGRESS
-Plan: 1 of 1 in current phase
-Status: Plan 05-01 complete, Phase 5 complete
-Last activity: 2026-01-21 - Completed 05-01-PLAN.md (ESLint Setup and svelte-check Fixes)
+Plan: 2 of 3 in current phase
+Status: Plans 05-01, 05-03 complete; 05-02 pending
+Last activity: 2026-01-21 - Completed 05-03-PLAN.md (Pattern Documentation and GSD Workflow Updates)
 
-Progress: [███████████████░░░░░░░░░] 58% (15/26 plans)
+Progress: [████████████████░░░░░░░░] 62% (16/26 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 15
-- Average duration: 5.8 min
-- Total execution time: 87 min
+- Total plans completed: 16
+- Average duration: 5.6 min
+- Total execution time: 89 min
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [███████████████░░░░░░░░
 | 2. Staff-Services-Content | 4/4 | 22 min | 5.5 min |
 | 3. Booking-Engine | 4/4 | 18 min | 4.5 min |
 | 4. Payments | 3/3 | 27 min | 9.0 min |
-| 5. Code-Quality-Analysis | 1/1 | 3 min | 3.0 min |
+| 5. Code-Quality-Analysis | 2/3 | 5 min | 2.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-04 (4 min), 04-01 (8 min), 04-02 (7 min), 04-03 (12 min), 05-01 (3 min)
-- Trend: Stable (code quality plan faster due to focused scope)
+- Last 5 plans: 04-01 (8 min), 04-02 (7 min), 04-03 (12 min), 05-01 (3 min), 05-03 (2 min)
+- Trend: Stable (code quality plans fast due to focused scope)
 
 *Updated after each plan completion*
 
@@ -97,6 +97,9 @@ Recent decisions affecting current work:
 - [05-01]: ESLint 9 flat config with typescript-eslint and eslint-plugin-svelte
 - [05-01]: untrack() for intentional one-time prop capture (gallery filter state)
 - [05-01]: $derived for reactive prop-derived values (confirmation page dates)
+- [05-03]: Pattern docs in .serena/memories/patterns/ for cross-session persistence
+- [05-03]: Serena MCP mandated for codebase traversal (not grep/find)
+- [05-03]: Ref/Context7 mandated for documentation lookup (not web search)
 
 ### Roadmap Evolution
 
@@ -108,9 +111,10 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-2 pending - `/gsd:check-todos` to review
+3 pending - `/gsd:check-todos` to review
 - Use Claude Chrome for UI design analysis (ui)
 - Review Phase 3 deferred features for feature completeness (booking) - see `.planning/phases/03-booking-engine/03-CONTEXT.md`
+- GSD workflow updates for Serena/Ref (tooling) - see `.planning/todos/pending/2026-01-21-gsd-workflow-updates.md`
 
 ### Blockers/Concerns
 
@@ -122,7 +126,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-01-21T18:08:01Z
-Stopped at: Completed 05-01-PLAN.md (ESLint Setup and svelte-check Fixes)
+Last session: 2026-01-21T18:12:06Z
+Stopped at: Completed 05-03-PLAN.md (Pattern Documentation and GSD Workflow Updates)
 Resume file: None
-Next action: Phase 5 complete - proceed to Phase 6 (Notifications) - `/gsd:plan-phase 6`
+Next action: Execute 05-02-PLAN.md or proceed to Phase 6 (Notifications)
