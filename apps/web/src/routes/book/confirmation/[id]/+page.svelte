@@ -15,9 +15,9 @@
 
   let { data } = $props();
 
-  // Parse dates
-  const startTime = new Date(data.appointment.startTime);
-  const endTime = new Date(data.appointment.endTime);
+  // Parse dates - use $derived for reactive derivation from props
+  let startTime = $derived(new Date(data.appointment.startTime));
+  let endTime = $derived(new Date(data.appointment.endTime));
 
   // Salon location (hardcoded for now, can be CMS-driven later)
   const SALON_LOCATION = 'Expressions Hair Designs, 123 Main St, City, State';

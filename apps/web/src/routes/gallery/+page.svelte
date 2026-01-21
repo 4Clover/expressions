@@ -1,11 +1,14 @@
 <script lang="ts">
+  import { untrack } from "svelte";
   import { GalleryGrid, GalleryFilter } from "$lib/components/gallery";
 
   let { data } = $props();
 
   // Filter state - initialized from URL query parameters
-  let selectedCategory = $state(data.initialCategory);
-  let selectedStylist = $state(data.initialStylist);
+  // User modifies these filters interactively, so initial capture is intentional
+  // Use untrack to suppress state_referenced_locally warning
+  let selectedCategory = $state(untrack(() => data.initialCategory));
+  let selectedStylist = $state(untrack(() => data.initialStylist));
 
   // Filtered gallery items based on current filter selections
   let filteredItems = $derived(
