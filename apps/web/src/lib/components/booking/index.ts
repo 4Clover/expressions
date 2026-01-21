@@ -4,6 +4,7 @@ export { default as ServiceStep } from './ServiceStep.svelte';
 export { default as StylistStep } from './StylistStep.svelte';
 export { default as DateTimeStep } from './DateTimeStep.svelte';
 export { default as ConfirmStep } from './ConfirmStep.svelte';
+export { default as PaymentStep } from './PaymentStep.svelte';
 
 // Supporting components
 export { default as WeekView } from './WeekView.svelte';
