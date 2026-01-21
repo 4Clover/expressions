@@ -15,7 +15,7 @@ This roadmap delivers a custom salon website that replaces fragmented Vagaro + S
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
 - [x] **Phase 1: Foundation** - Monorepo, database, auth, design system, base UI components
-- [ ] **Phase 2: Staff-Services-Content** - Staff profiles, service catalog, CMS integration, marketing pages
+- [x] **Phase 2: Staff-Services-Content** - Staff profiles, service catalog, CMS integration, marketing pages
 - [ ] **Phase 3: Booking-Engine** - Availability calculation, booking wizard, cancel/reschedule
 - [ ] **Phase 4: Payments** - Square integration, per-stylist payment methods
 - [ ] **Phase 5: Notifications** - Email and SMS confirmations and reminders
@@ -56,10 +56,10 @@ Plans:
 **Plans:** 4 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Staff and services database relations, RLS policies, and display pages
-- [ ] 02-02-PLAN.md — Storyblok CMS integration and block components
-- [ ] 02-03-PLAN.md — CMS-driven marketing pages (homepage, about, contact)
-- [ ] 02-04-PLAN.md — Photo gallery with before/after comparison and filtering
+- [x] 02-01-PLAN.md — Staff and services database relations, RLS policies, and display pages
+- [x] 02-02-PLAN.md — Storyblok CMS integration and block components
+- [x] 02-03-PLAN.md — CMS-driven marketing pages (homepage, about, contact)
+- [x] 02-04-PLAN.md — Photo gallery with before/after comparison and filtering
 
 **Directory:** `.planning/phases/02-staff-services-content/`
 
@@ -169,11 +169,11 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-01-21 |
-| 2. Staff-Services-Content | 0/4 | Planned | - |
+| 2. Staff-Services-Content | 4/4 | Complete | 2026-01-21 |
 | 3. Booking-Engine | 0/4 | Not started | - |
 | 4. Payments | 0/3 | Not started | - |
 | 5. Notifications | 0/3 | Not started | - |
 | 6. Calendar-Sync | 0/3 | Not started | - |
 | 7. Admin-SEO-Launch | 0/4 | Not started | - |
 
-**Total:** 3/24 plans complete
+**Total:** 7/24 plans complete

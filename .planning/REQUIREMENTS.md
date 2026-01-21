@@ -27,11 +27,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Staff & Services
 
-- [ ] **STAFF-01**: Each stylist has profile page with photo, bio, specialties
-- [ ] **STAFF-02**: Each stylist has their own service pricing (per-stylist DB entries)
-- [ ] **STAFF-03**: Services organized by category (cuts, color, treatments, styling)
-- [ ] **STAFF-04**: Services show duration and price (fixed, starting-from, or range)
-- [ ] **STAFF-05**: Stylist portfolio section with before/after work samples
+- [x] **STAFF-01**: Each stylist has profile page with photo, bio, specialties
+- [x] **STAFF-02**: Each stylist has their own service pricing (per-stylist DB entries)
+- [x] **STAFF-03**: Services organized by category (cuts, color, treatments, styling)
+- [x] **STAFF-04**: Services show duration and price (fixed, starting-from, or range)
+- [x] **STAFF-05**: Stylist portfolio section with before/after work samples
 
 ### Notifications
 
@@ -43,11 +43,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Content
 
-- [ ] **CONT-01**: Homepage with hero section, services overview, staff highlights
-- [ ] **CONT-02**: Photo gallery with before/after images
-- [ ] **CONT-03**: Gallery filterable by service type and stylist
-- [ ] **CONT-04**: About page with salon story and location info
-- [ ] **CONT-05**: Contact page with embedded map, hours, phone number
+- [x] **CONT-01**: Homepage with hero section, services overview, staff highlights
+- [x] **CONT-02**: Photo gallery with before/after images
+- [x] **CONT-03**: Gallery filterable by service type and stylist
+- [x] **CONT-04**: About page with salon story and location info
+- [x] **CONT-05**: Contact page with embedded map, hours, phone number
 
 ### Admin (CMS)
 
