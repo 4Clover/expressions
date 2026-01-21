@@ -5,34 +5,34 @@
 See: .planning/PROJECT.md (updated 2025-01-19)
 
 **Core value:** Get the salon visible on Google with a professional custom site
-**Current focus:** Phase 2 - Staff-Services-Content
+**Current focus:** Phase 2 - Staff-Services-Content (COMPLETE)
 
 ## Current Position
 
 Phase: 2 of 7 (Staff-Services-Content)
-Plan: 3 of 4 in current phase
-Status: In progress
-Last activity: 2026-01-21 - Completed 02-03-PLAN.md (Marketing Pages)
+Plan: 4 of 4 in current phase
+Status: Phase complete
+Last activity: 2026-01-21 - Completed 02-04-PLAN.md (Gallery Page)
 
-Progress: [██████░░░░░░░░░░░░░░░░░░] 25% (6/24 plans)
+Progress: [███████░░░░░░░░░░░░░░░░░] 29% (7/24 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 5.3 min
-- Total execution time: 32 min
+- Total plans completed: 7
+- Average duration: 5.6 min
+- Total execution time: 39 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1. Foundation | 3/3 | 17 min | 5.7 min |
-| 2. Staff-Services-Content | 3/4 | 15 min | 5.0 min |
+| 2. Staff-Services-Content | 4/4 | 22 min | 5.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-03 (8 min), 02-02 (6 min), 02-01 (7 min), 02-03 (4 min)
-- Trend: Stable/Improving
+- Last 5 plans: 02-02 (6 min), 02-01 (7 min), 02-03 (4 min), 02-04 (7 min)
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -64,6 +64,8 @@ Recent decisions affecting current work:
 - [02-02]: Rich text fields use any with parameter cast (type incompatibility)
 - [02-03]: Storyblok bridge uses $derived with fallback pattern (Svelte 5 strictness)
 - [02-03]: Staff API uses dynamic import to handle missing DATABASE_URL gracefully
+- [02-04]: URL query params for gallery deep linking (?category=x&stylist=y)
+- [02-04]: CSS-based before/after slider for Svelte 5 compatibility
 
 ### Pending Todos
 
@@ -81,7 +83,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-01-21T11:59:15Z
-Stopped at: Completed 02-03-PLAN.md (Marketing Pages)
+Last session: 2026-01-21T12:02:04Z
+Stopped at: Completed 02-04-PLAN.md (Gallery Page) - Phase 2 complete
 Resume file: None
-Next action: Execute 02-04-PLAN.md (Gallery Page)
+Next action: Begin Phase 3 (Booking Foundation) - run /gsd:research-phase
