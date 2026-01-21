@@ -1,18 +1,7 @@
 <script lang="ts">
   import BeforeAfterSlider from "./BeforeAfterSlider.svelte";
   import GalleryImage from "./GalleryImage.svelte";
-
-  export type GalleryItem = {
-    id: string;
-    type: "comparison" | "single";
-    beforeImage?: string;
-    afterImage?: string;
-    image?: string;
-    alt: string;
-    stylistId?: string;
-    categoryId?: string;
-    caption?: string;
-  };
+  import type { GalleryItem } from "./types";
 
   interface Props {
     items: GalleryItem[];
