@@ -25,7 +25,7 @@ import {
   appointments,
   payments,
   processedWebhooks,
-} from '../src/schema/index.js';
+} from '../src/schema/index';
 
 // ─────────────────────────────────────────────────────────────
 // Configuration

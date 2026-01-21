@@ -1,8 +1,8 @@
 import { pgTable, pgPolicy, uuid, text, boolean, timestamp } from 'drizzle-orm/pg-core';
 import { relations, sql } from 'drizzle-orm';
 import { anonRole, authenticatedRole } from 'drizzle-orm/supabase';
-import { profiles } from './profiles.js';
-import { staffServices } from './services.js';
+import { profiles } from './profiles';
+import { staffServices } from './services';
 
 export const staff = pgTable('staff', {
   id: uuid('id').primaryKey().defaultRandom(),

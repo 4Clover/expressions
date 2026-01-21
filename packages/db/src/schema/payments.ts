@@ -1,8 +1,8 @@
 import { pgTable, pgPolicy, pgEnum, uuid, text, integer, boolean, timestamp } from 'drizzle-orm/pg-core';
 import { relations, sql } from 'drizzle-orm';
 import { anonRole, authenticatedRole } from 'drizzle-orm/supabase';
-import { staff } from './staff.js';
-import { appointments } from './appointments.js';
+import { staff } from './staff';
+import { appointments } from './appointments';
 
 // Payment method type enum for P2P payments
 export const paymentMethodTypeEnum = pgEnum('payment_method_type', ['venmo', 'cashapp', 'zelle', 'cash']);

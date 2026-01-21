@@ -1,8 +1,8 @@
 import { pgTable, pgPolicy, pgEnum, uuid, text, integer, boolean, timestamp, unique } from 'drizzle-orm/pg-core';
 import { relations, sql } from 'drizzle-orm';
 import { anonRole, authenticatedRole } from 'drizzle-orm/supabase';
-import { staff } from './staff.js';
-import { services } from './services.js';
+import { staff } from './staff';
+import { services } from './services';
 
 // Appointment status enum
 export const appointmentStatusEnum = pgEnum('appointment_status', [

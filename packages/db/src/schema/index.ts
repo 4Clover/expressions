@@ -1,8 +1,8 @@
 // Profile and authentication
-export { profiles } from './profiles.js';
+export { profiles } from './profiles';
 
 // Staff management
-export { staff, staffRelations } from './staff.js';
+export { staff, staffRelations } from './staff';
 
 // Services and pricing
 export {
@@ -13,7 +13,7 @@ export {
   serviceCategoriesRelations,
   servicesRelations,
   staffServicesRelations
-} from './services.js';
+} from './services';
 
 // Appointments and scheduling
 export {
@@ -22,7 +22,7 @@ export {
   appointments,
   staffScheduleRelations,
   appointmentsRelations
-} from './appointments.js';
+} from './appointments';
 
 // Payments and payment methods
 export {
@@ -34,4 +34,4 @@ export {
   staffPaymentMethodsRelations,
   staffSquareConfigRelations,
   paymentsRelations
-} from './payments.js';
+} from './payments';

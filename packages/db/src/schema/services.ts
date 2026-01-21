@@ -1,7 +1,7 @@
 import { pgTable, pgPolicy, uuid, text, integer, boolean, timestamp, pgEnum } from 'drizzle-orm/pg-core';
 import { relations, sql } from 'drizzle-orm';
 import { anonRole, authenticatedRole } from 'drizzle-orm/supabase';
-import { staff } from './staff.js';
+import { staff } from './staff';
 
 // Price type enum: fixed price, starting-from price, or range
 export const priceTypeEnum = pgEnum('price_type', ['fixed', 'starting', 'range']);
