@@ -14,6 +14,10 @@ export default ts.config(
         ...globals.browser,
         ...globals.node
       }
+    },
+    rules: {
+      // Allow underscore-prefixed unused variables globally (common TypeScript/JS pattern)
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }]
     }
   },
   {
