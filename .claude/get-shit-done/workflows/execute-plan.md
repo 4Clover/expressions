@@ -9,6 +9,45 @@ Read config.json for planning behavior settings.
 @./.claude/get-shit-done/references/git-integration.md
 </required_reading>
 
+<serena_editing_strategy>
+**Prefer Serena for precise code edits:**
+
+**When to use Serena:**
+- Replacing a function/method body: `mcp__serena__replace_symbol_body`
+- Adding a new method to a class: `mcp__serena__insert_after_symbol`
+- Adding imports at file start: `mcp__serena__insert_before_symbol`
+- Understanding what exists: `mcp__serena__get_symbols_overview`
+
+**Example workflow:**
+1. Find symbol: `find_symbol(name_path_pattern="MyClass/myMethod", include_body=true)`
+2. Replace: `replace_symbol_body(name_path="MyClass/myMethod", body="new implementation")`
+
+**When to use Edit instead:**
+- Non-code files (JSON, YAML, MD)
+- Partial changes within a function body
+- Unsupported languages
+</serena_editing_strategy>
+
+<tool_usage_requirements>
+## Tool Usage Requirements
+
+**Serena MCP (repo navigation):**
+- Use for ALL file search operations (search_codebase, list_files)
+- Use for code edits when modifying existing files
+- Use for dependency scanning (find_usages, find_references)
+
+**Ref MCP / Context7 (documentation):**
+- Use for verifying API patterns against official docs
+- Use before implementing unfamiliar library patterns
+- Use when resolving type errors or deprecation warnings
+- Required libraries to verify: Svelte 5, SvelteKit 2, Drizzle ORM, Tailwind v4, shadcn-svelte
+
+**Priority:**
+1. Serena for codebase traversal (NOT grep/find)
+2. Ref/Context7 for documentation lookup (NOT web search)
+3. Standard tools only when MCP tools unavailable
+</tool_usage_requirements>
+
 <process>
 
 <step name="load_project_state" priority="first">
