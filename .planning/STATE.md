@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2025-01-19)
 ## Current Position
 
 Phase: 4 of 7 (Payments)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-01-21 - Completed 04-01-PLAN.md (Payment Schema Foundation)
+Last activity: 2026-01-21 - Completed 04-02-PLAN.md (Square Integration)
 
-Progress: [████████████░░░░░░░░░░░░] 50% (12/24 plans)
+Progress: [██████████████░░░░░░░░░░] 54% (13/24 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
-- Average duration: 5.4 min
-- Total execution time: 65 min
+- Total plans completed: 13
+- Average duration: 5.5 min
+- Total execution time: 72 min
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [████████████░░░░░░░░░░░
 | 1. Foundation | 3/3 | 17 min | 5.7 min |
 | 2. Staff-Services-Content | 4/4 | 22 min | 5.5 min |
 | 3. Booking-Engine | 4/4 | 18 min | 4.5 min |
-| 4. Payments | 1/3 | 8 min | 8.0 min |
+| 4. Payments | 2/3 | 15 min | 7.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (7 min), 03-03 (7 min), 03-04 (4 min), 04-01 (8 min)
+- Last 5 plans: 03-02 (7 min), 03-03 (7 min), 03-04 (4 min), 04-01 (8 min), 04-02 (7 min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -84,6 +84,10 @@ Recent decisions affecting current work:
 - [04-01]: Square OAuth tokens per-staff with Supabase Vault encryption note
 - [04-01]: Webhook idempotency via processedWebhooks with eventId PK
 - [04-01]: Deposit config on services (depositRequired + depositAmountCents)
+- [04-02]: Square SDK v43+ returns responses directly (not wrapped in 'result')
+- [04-02]: Use 'token' property (not 'accessToken') for SquareClient constructor
+- [04-02]: SquareEnvironment enum replaces Environment (SDK naming change)
+- [04-02]: WebhooksHelper.verifySignature is static async method
 
 ### Pending Todos
 
@@ -93,15 +97,15 @@ Recent decisions affecting current work:
 
 ### Blockers/Concerns
 
-- Research flagged: Confirm Square 2026 API requirements (Phase 4)
 - Research flagged: Test Plivo SMS deliverability in target region (Phase 5)
 - Research flagged: Investigate Google Calendar webhook rate limits (Phase 6)
 - User setup required: Supabase project with DATABASE_URL for db:push
 - User setup required: Storyblok space with VITE_STORYBLOK_ACCESS_TOKEN for CMS content
+- User setup required: Square Developer Dashboard with SQUARE_* environment variables
 
 ## Session Continuity
 
-Last session: 2026-01-21T13:53:00Z
-Stopped at: Completed 04-01-PLAN.md
+Last session: 2026-01-21T14:38:33Z
+Stopped at: Completed 04-02-PLAN.md (Square Integration)
 Resume file: None
-Next action: Execute 04-02-PLAN.md (Square OAuth & Payment Links)
+Next action: Execute 04-03-PLAN.md (Payment UI Integration)
