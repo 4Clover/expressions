@@ -39,7 +39,7 @@ export const GET: RequestHandler = async ({ url }) => {
 
   try {
     // Dynamically import to avoid errors when DATABASE_URL is not set
-    const { db, staffSchedule, staff, services, appointments, staffServices } = await import('@repo/db');
+    const { db, staffSchedule, services, appointments, staffServices } = await import('@repo/db');
     const { eq, and, gte, lt, inArray } = await import('drizzle-orm');
 
     // Get weekday (0-6, Sunday-Saturday)
@@ -119,8 +119,8 @@ export const GET: RequestHandler = async ({ url }) => {
 
         // Add slots, keeping track of which staff has availability
         for (const slot of slots) {
-          if (!allSlots.has(slot.time)) {
-            allSlots.set(slot.time, { time: slot.time, staffId: schedule.staffId });
+          if (!allSlots.has(slot.display)) {
+            allSlots.set(slot.display, { time: slot.display, staffId: schedule.staffId });
           }
         }
       }
