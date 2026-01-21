@@ -12,8 +12,11 @@ import {
   staffSchedule,
   appointments,
   services,
+  serviceCategories,
+  staffPaymentMethods,
 } from '../src/schema/index.js';
 import { nanoid } from 'nanoid';
+import { ilike } from 'drizzle-orm';
 
 // Check for DATABASE_URL
 if (!process.env.DATABASE_URL) {
@@ -187,17 +190,134 @@ async function seedSampleAppointments() {
   return insertedAppointments;
 }
 
+async function seedPaymentMethods() {
+  console.log('Seeding payment methods...');
+
+  // Get all active staff
+  const staffMembers = await db.select().from(staff).where(eq(staff.isActive, true));
+
+  if (staffMembers.length === 0) {
+    console.log('  No active staff found - skipping payment methods');
+    return [];
+  }
+
+  const insertedMethods: string[] = [];
+
+  // Define payment methods for test data
+  // Will match staff by displayName (case-insensitive partial match)
+  const paymentConfig: Record<string, Array<{ methodType: 'venmo' | 'cashapp' | 'zelle' | 'cash'; handle?: string }>> = {
+    'Jane': [
+      { methodType: 'venmo', handle: '@jane-stylist' },
+      { methodType: 'cash' },
+    ],
+    'John': [
+      { methodType: 'venmo', handle: '@john-cuts' },
+      { methodType: 'zelle', handle: 'john@email.com' },
+      { methodType: 'cashapp', handle: '$JohnCuts' },
+    ],
+    'Maria': [
+      { methodType: 'cash' },
+    ],
+  };
+
+  for (const member of staffMembers) {
+    // Find matching config by first name
+    const firstName = member.displayName.split(' ')[0];
+    const methods = paymentConfig[firstName];
+
+    if (!methods) {
+      console.log(`  No payment config for ${member.displayName} - skipping`);
+      continue;
+    }
+
+    console.log(`  Creating payment methods for ${member.displayName}...`);
+
+    for (let i = 0; i < methods.length; i++) {
+      const method = methods[i];
+      try {
+        await db
+          .insert(staffPaymentMethods)
+          .values({
+            staffId: member.id,
+            methodType: method.methodType,
+            handle: method.handle || null,
+            isEnabled: true,
+            displayOrder: i,
+          })
+          .onConflictDoNothing();
+        insertedMethods.push(`${member.displayName} - ${method.methodType}`);
+      } catch (e) {
+        // Already exists or error
+      }
+    }
+  }
+
+  console.log(`  Inserted/skipped ${insertedMethods.length} payment method entries`);
+  return insertedMethods;
+}
+
+async function seedDepositRequiredServices() {
+  console.log('Seeding deposit-required services...');
+
+  // Find "Color" category (or similar)
+  const colorCategory = await db
+    .select()
+    .from(serviceCategories)
+    .where(ilike(serviceCategories.name, '%color%'))
+    .limit(1);
+
+  if (colorCategory.length === 0) {
+    console.log('  No "Color" category found - skipping deposit config');
+    return [];
+  }
+
+  // Get first service in the Color category
+  const colorServices = await db
+    .select()
+    .from(services)
+    .where(eq(services.categoryId, colorCategory[0].id))
+    .limit(1);
+
+  if (colorServices.length === 0) {
+    console.log('  No services in Color category - skipping deposit config');
+    return [];
+  }
+
+  // Update the service to require deposit ($50 = 5000 cents)
+  const updated = await db
+    .update(services)
+    .set({
+      depositRequired: true,
+      depositAmountCents: 5000, // $50 deposit
+    })
+    .where(eq(services.id, colorServices[0].id))
+    .returning({ name: services.name });
+
+  if (updated.length > 0) {
+    console.log(`  Marked "${updated[0].name}" as deposit-required ($50)`);
+    return [updated[0].name];
+  }
+
+  return [];
+}
+
 async function main() {
   console.log('Starting seed script...\n');
 
   try {
     const schedules = await seedStaffSchedules();
     console.log('');
-    const appointments = await seedSampleAppointments();
+    const appointmentResults = await seedSampleAppointments();
+    console.log('');
+    const paymentMethods = await seedPaymentMethods();
+    console.log('');
+    const depositServices = await seedDepositRequiredServices();
 
     console.log('\n--- Seed Complete ---');
     console.log(`Schedules: ${schedules.length} entries`);
-    console.log(`Appointments: ${appointments.length} entries`);
+    console.log(`Appointments: ${appointmentResults.length} entries`);
+    console.log(`Payment methods: ${paymentMethods.length} entries`);
+    console.log(`Deposit-required services: ${depositServices.length} entries`);
   } catch (error) {
     console.error('Seed failed:', error);
     process.exit(1);
