@@ -55,7 +55,8 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-None.
+1 pending — `/gsd:check-todos` to review
+- Use Claude Chrome for UI design analysis (ui)
 
 ### Blockers/Concerns
 
