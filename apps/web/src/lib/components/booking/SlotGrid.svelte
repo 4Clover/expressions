@@ -9,12 +9,7 @@
 
   import { Button } from "$lib/components/ui/button";
   import { cn } from "$lib/utils";
-
-  export interface TimeSlot {
-    start: Date;
-    end: Date;
-    display: string;
-  }
+  import type { TimeSlot } from "./types";
 
   let {
     slots = [],

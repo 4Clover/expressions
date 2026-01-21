@@ -11,4 +11,4 @@ export { default as WeekView } from './WeekView.svelte';
 export { default as SlotGrid } from './SlotGrid.svelte';
 
 // Re-export TimeSlot type for convenience
-export type { TimeSlot } from './SlotGrid.svelte';
+export type { TimeSlot } from './types';

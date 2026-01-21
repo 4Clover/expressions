@@ -8,7 +8,8 @@
 
   import { format, startOfWeek, addDays } from 'date-fns';
   import WeekView from "./WeekView.svelte";
-  import SlotGrid, { type TimeSlot } from "./SlotGrid.svelte";
+  import SlotGrid from "./SlotGrid.svelte";
+  import type { TimeSlot } from "./types";
   import { cn } from "$lib/utils";
 
   let {
