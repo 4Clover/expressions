@@ -73,13 +73,13 @@ Plans:
   3. Customer can cancel appointment online within policy window
   4. Customer can reschedule appointment to a different available slot
   5. Deposit can be collected via card-on-file for no-show protection
-**Plans**: TBD
+**Plans:** 4 plans
 
 Plans:
-- [ ] 03-01: Availability calculation engine
-- [ ] 03-02: Booking wizard UI
-- [ ] 03-03: Cancel and reschedule flows
-- [ ] 03-04: Deposit and no-show protection
+- [ ] 03-01-PLAN.md — Schema and dependencies (appointments table, staff schedule, npm packages)
+- [ ] 03-02-PLAN.md — Availability engine and booking UI components
+- [ ] 03-03-PLAN.md — Booking wizard page and confirmation flow
+- [ ] 03-04-PLAN.md — Cancel and reschedule flows
 
 **Directory:** `.planning/phases/03-booking-engine/`
 
@@ -170,7 +170,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-01-21 |
 | 2. Staff-Services-Content | 4/4 | Complete | 2026-01-21 |
-| 3. Booking-Engine | 0/4 | Not started | - |
+| 3. Booking-Engine | 0/4 | Planned | - |
 | 4. Payments | 0/3 | Not started | - |
 | 5. Notifications | 0/3 | Not started | - |
 | 6. Calendar-Sync | 0/3 | Not started | - |
