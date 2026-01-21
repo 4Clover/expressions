@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2025-01-19)
 
 **Core value:** Get the salon visible on Google with a professional custom site
-**Current focus:** Phase 4 - Payments
+**Current focus:** Phase 4 - Payments (COMPLETE)
 
 ## Current Position
 
-Phase: 4 of 7 (Payments)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-01-21 - Completed 04-02-PLAN.md (Square Integration)
+Phase: 4 of 7 (Payments) - COMPLETE
+Plan: 3 of 3 in current phase (PHASE COMPLETE)
+Status: Phase 4 complete, ready for Phase 5
+Last activity: 2026-01-21 - Completed 04-03-PLAN.md (Payment UI Integration)
 
-Progress: [██████████████░░░░░░░░░░] 54% (13/24 plans)
+Progress: [██████████████████░░░░░░] 58% (14/24 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
-- Average duration: 5.5 min
-- Total execution time: 72 min
+- Total plans completed: 14
+- Average duration: 6.0 min
+- Total execution time: 84 min
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [██████████████░░░░░░░░░
 | 1. Foundation | 3/3 | 17 min | 5.7 min |
 | 2. Staff-Services-Content | 4/4 | 22 min | 5.5 min |
 | 3. Booking-Engine | 4/4 | 18 min | 4.5 min |
-| 4. Payments | 2/3 | 15 min | 7.5 min |
+| 4. Payments | 3/3 | 27 min | 9.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (7 min), 03-03 (7 min), 03-04 (4 min), 04-01 (8 min), 04-02 (7 min)
-- Trend: Stable
+- Last 5 plans: 03-03 (7 min), 03-04 (4 min), 04-01 (8 min), 04-02 (7 min), 04-03 (12 min)
+- Trend: Stable (payments slightly longer due to complexity)
 
 *Updated after each plan completion*
 
@@ -88,6 +88,11 @@ Recent decisions affecting current work:
 - [04-02]: Use 'token' property (not 'accessToken') for SquareClient constructor
 - [04-02]: SquareEnvironment enum replaces Environment (SDK naming change)
 - [04-02]: WebhooksHelper.verifySignature is static async method
+- [04-03]: Venmo deep link uses venmo.com URL (opens app via universal links)
+- [04-03]: CashApp deep link uses cash.app URL format
+- [04-03]: Zelle has no universal deep link - display email with bank app instructions
+- [04-03]: Payment completion page polls for webhook status with max 10 attempts
+- [04-03]: Deposit-required services must use Square online payment
 
 ### Pending Todos
 
@@ -105,7 +110,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-01-21T14:38:33Z
-Stopped at: Completed 04-02-PLAN.md (Square Integration)
+Last session: 2026-01-21T15:15:00Z
+Stopped at: Completed 04-03-PLAN.md (Payment UI Integration) - PHASE 4 COMPLETE
 Resume file: None
-Next action: Execute 04-03-PLAN.md (Payment UI Integration)
+Next action: Plan Phase 5 (Notifications) - `/gsd:plan-phase 5`
