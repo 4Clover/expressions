@@ -28,6 +28,8 @@ export const services = pgTable('services', {
   priceType: priceTypeEnum('price_type').notNull().default('fixed'),
   priceMin: integer('price_min').notNull(), // Price in cents
   priceMax: integer('price_max'), // Nullable for fixed/starting prices
+  depositRequired: boolean('deposit_required').notNull().default(false),
+  depositAmountCents: integer('deposit_amount_cents'), // Nullable - only set when depositRequired is true
   isActive: boolean('is_active').notNull().default(true),
   createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
