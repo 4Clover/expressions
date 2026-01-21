@@ -53,13 +53,13 @@ Plans:
   3. Owner can edit homepage content, about page, and contact info via Storyblok visual editor
   4. Homepage displays hero section, services overview, and staff highlights
   5. Photo gallery displays before/after images filterable by service type and stylist
-**Plans**: TBD
+**Plans:** 4 plans
 
 Plans:
-- [ ] 02-01: Staff and services database and UI
-- [ ] 02-02: Storyblok CMS integration
-- [ ] 02-03: Marketing pages (homepage, about, contact)
-- [ ] 02-04: Photo gallery
+- [ ] 02-01-PLAN.md — Staff and services database relations, RLS policies, and display pages
+- [ ] 02-02-PLAN.md — Storyblok CMS integration and block components
+- [ ] 02-03-PLAN.md — CMS-driven marketing pages (homepage, about, contact)
+- [ ] 02-04-PLAN.md — Photo gallery with before/after comparison and filtering
 
 **Directory:** `.planning/phases/02-staff-services-content/`
 
@@ -169,7 +169,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-01-21 |
-| 2. Staff-Services-Content | 0/4 | Not started | - |
+| 2. Staff-Services-Content | 0/4 | Planned | - |
 | 3. Booking-Engine | 0/4 | Not started | - |
 | 4. Payments | 0/3 | Not started | - |
 | 5. Notifications | 0/3 | Not started | - |
