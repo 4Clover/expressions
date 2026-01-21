@@ -92,12 +92,12 @@ Plans:
   2. Customer can choose "pay at salon" when booking and sees stylist's preferred payment methods
   3. Stylists who enable Square can accept online payments during booking
   4. Payment webhooks correctly update booking status
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 04-01: Per-stylist payment configuration
-- [ ] 04-02: Square integration
-- [ ] 04-03: Pay-at-salon flow
+- [ ] 04-01-PLAN.md — Payment schema and stylist configuration (payment methods, Square config, deposits)
+- [ ] 04-02-PLAN.md — Square OAuth and online payment (OAuth flow, payment links, webhooks)
+- [ ] 04-03-PLAN.md — Pay-at-salon flow and booking integration (PaymentStep, deep links, confirmation)
 
 **Directory:** `.planning/phases/04-payments/`
 
@@ -171,7 +171,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 1. Foundation | 3/3 | Complete | 2026-01-21 |
 | 2. Staff-Services-Content | 4/4 | Complete | 2026-01-21 |
 | 3. Booking-Engine | 4/4 | Complete | 2026-01-21 |
-| 4. Payments | 0/3 | Not started | - |
+| 4. Payments | 0/3 | Planned | - |
 | 5. Notifications | 0/3 | Not started | - |
 | 6. Calendar-Sync | 0/3 | Not started | - |
 | 7. Admin-SEO-Launch | 0/4 | Not started | - |
