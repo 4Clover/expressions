@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2025-01-19)
 
 **Core value:** Get the salon visible on Google with a professional custom site
-**Current focus:** Phase 1 - Foundation
+**Current focus:** Phase 2 - Staff-Services-Content
 
 ## Current Position
 
-Phase: 1 of 7 (Foundation)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-01-20 - Completed 01-02-PLAN.md (Database package with Drizzle)
+Phase: 2 of 7 (Staff-Services-Content)
+Plan: 0 of 4 in current phase
+Status: Ready to plan
+Last activity: 2026-01-21 - Completed Phase 1 (Foundation) with design system approval
 
-Progress: [██░░░░░░░░░░░░░░░░░░░░░░] 8% (2/24 plans)
+Progress: [███░░░░░░░░░░░░░░░░░░░░░] 12% (3/24 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 4.5 min
-- Total execution time: 9 min
+- Total plans completed: 3
+- Average duration: 5.7 min
+- Total execution time: 17 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1. Foundation | 2/3 | 9 min | 4.5 min |
+| 1. Foundation | 3/3 | 17 min | 5.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4 min), 01-02 (5 min)
-- Trend: Not enough data
+- Last 5 plans: 01-01 (4 min), 01-02 (5 min), 01-03 (8 min)
+- Trend: Stable
 
 *Updated after each plan completion*
 
@@ -52,6 +52,10 @@ Recent decisions affecting current work:
 - [01-02]: prepare: false for postgres client (Supabase transaction pooler)
 - [01-02]: Prices stored in cents (avoid floating point issues)
 - [01-02]: Price type enum (fixed/starting/range) for salon pricing models
+- [01-03]: OKLCH color space for design tokens (perceptually uniform)
+- [01-03]: Rose gold accent color for CTAs/highlights
+- [01-03]: Cormorant Garamond (serif, 700) for headings, DM Sans for body
+- [01-03]: Card shadows increased per user feedback (shadow + hover:shadow-lg)
 
 ### Pending Todos
 
@@ -68,6 +72,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-01-20T13:42:41Z
-Stopped at: Completed 01-02-PLAN.md (Database package with Drizzle)
+Last session: 2026-01-21T02:20:00Z
+Stopped at: Completed Phase 1 (Foundation) - design system approved
 Resume file: None
+Next action: Plan Phase 2 (Staff-Services-Content)

@@ -14,7 +14,7 @@ This roadmap delivers a custom salon website that replaces fragmented Vagaro + S
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Foundation** - Monorepo, database, auth, design system, base UI components
+- [x] **Phase 1: Foundation** - Monorepo, database, auth, design system, base UI components
 - [ ] **Phase 2: Staff-Services-Content** - Staff profiles, service catalog, CMS integration, marketing pages
 - [ ] **Phase 3: Booking-Engine** - Availability calculation, booking wizard, cancel/reschedule
 - [ ] **Phase 4: Payments** - Square integration, per-stylist payment methods
@@ -37,9 +37,9 @@ This roadmap delivers a custom salon website that replaces fragmented Vagaro + S
 **Plans:** 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Monorepo and tooling setup (Turborepo, SvelteKit, Cloudflare adapter)
-- [ ] 01-02-PLAN.md — Database schema and Supabase connection (Drizzle ORM, RLS policies)
-- [ ] 01-03-PLAN.md — Design system and component library (shadcn-svelte, design tokens)
+- [x] 01-01-PLAN.md — Monorepo and tooling setup (Turborepo, SvelteKit, Cloudflare adapter)
+- [x] 01-02-PLAN.md — Database schema and Supabase connection (Drizzle ORM, RLS policies)
+- [x] 01-03-PLAN.md — Design system and component library (shadcn-svelte, design tokens)
 
 **Directory:** `.planning/phases/01-foundation/`
 
@@ -168,7 +168,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Planned | - |
+| 1. Foundation | 3/3 | Complete | 2026-01-21 |
 | 2. Staff-Services-Content | 0/4 | Not started | - |
 | 3. Booking-Engine | 0/4 | Not started | - |
 | 4. Payments | 0/3 | Not started | - |
@@ -176,4 +176,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 | 6. Calendar-Sync | 0/3 | Not started | - |
 | 7. Admin-SEO-Launch | 0/4 | Not started | - |
 
-**Total:** 0/24 plans complete
+**Total:** 3/24 plans complete
