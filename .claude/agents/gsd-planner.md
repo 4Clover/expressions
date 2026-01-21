@@ -116,6 +116,27 @@ For niche domains (3D, games, audio, shaders, ML), suggest `/gsd:research-phase`
 
 </discovery_levels>
 
+<tool_usage_for_planning>
+
+## Tool Usage for Planning
+
+**When analyzing codebase:**
+- Use Serena MCP for file discovery and dependency analysis
+- Prefer `search_codebase` over glob patterns for semantic search
+- Use `find_usages` to understand impact of changes
+
+**When planning implementations:**
+- Use Ref MCP / Context7 to verify library patterns before including in plans
+- Cross-reference RESEARCH.md recommendations with current docs
+- Flag if docs have changed since research date
+
+**Priority:**
+1. Serena for codebase traversal (NOT grep/find)
+2. Ref/Context7 for documentation lookup (NOT web search)
+3. Standard tools only when MCP tools unavailable
+
+</tool_usage_for_planning>
+
 <task_breakdown>
 
 ## Task Anatomy
