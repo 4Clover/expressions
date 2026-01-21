@@ -10,29 +10,29 @@ See: .planning/PROJECT.md (updated 2025-01-19)
 ## Current Position
 
 Phase: 2 of 7 (Staff-Services-Content)
-Plan: 2 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: In progress
-Last activity: 2026-01-21 - Completed 02-01-PLAN.md (Staff and Services Display Pages)
+Last activity: 2026-01-21 - Completed 02-03-PLAN.md (Marketing Pages)
 
-Progress: [█████░░░░░░░░░░░░░░░░░░░] 21% (5/24 plans)
+Progress: [██████░░░░░░░░░░░░░░░░░░] 25% (6/24 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
-- Average duration: 5.6 min
-- Total execution time: 28 min
+- Total plans completed: 6
+- Average duration: 5.3 min
+- Total execution time: 32 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1. Foundation | 3/3 | 17 min | 5.7 min |
-| 2. Staff-Services-Content | 2/4 | 11 min | 5.5 min |
+| 2. Staff-Services-Content | 3/4 | 15 min | 5.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (5 min), 01-03 (8 min), 02-02 (6 min), 02-01 (7 min)
-- Trend: Stable
+- Last 5 plans: 01-03 (8 min), 02-02 (6 min), 02-01 (7 min), 02-03 (4 min)
+- Trend: Stable/Improving
 
 *Updated after each plan completion*
 
@@ -62,6 +62,8 @@ Recent decisions affecting current work:
 - [02-01]: Custom price priority: show staff custom price, else service base price
 - [02-02]: Type assertion for Storyblok components (Svelte 5 types stricter than SDK)
 - [02-02]: Rich text fields use any with parameter cast (type incompatibility)
+- [02-03]: Storyblok bridge uses $derived with fallback pattern (Svelte 5 strictness)
+- [02-03]: Staff API uses dynamic import to handle missing DATABASE_URL gracefully
 
 ### Pending Todos
 
@@ -79,7 +81,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-01-21T11:53:26Z
-Stopped at: Completed 02-01-PLAN.md (Staff and Services Display Pages)
+Last session: 2026-01-21T11:59:15Z
+Stopped at: Completed 02-03-PLAN.md (Marketing Pages)
 Resume file: None
-Next action: Execute 02-03-PLAN.md (Marketing Pages)
+Next action: Execute 02-04-PLAN.md (Gallery Page)
