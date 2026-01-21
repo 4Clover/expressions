@@ -13,9 +13,9 @@
 
 <div
   class={cn(
-    "rounded-lg border border-border bg-card text-card-foreground shadow-sm",
+    "rounded-lg border border-border bg-card text-card-foreground shadow",
     "transition-all duration-[var(--transition-smooth)]",
-    "hover:shadow-md",
+    "hover:shadow-lg",
     className
   )}
   {...restProps}
